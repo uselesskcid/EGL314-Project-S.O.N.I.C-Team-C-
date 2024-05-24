@@ -5,7 +5,7 @@ inport = mido.open_input(midipad) # input port for feedback from launchpad
 def pixel(buttonid, colour): #function to light up 1 pixel
     msg = mido.Message('note_on', note=buttonid, velocity=colour)
     outport.send(msg)
-
+#button leds
 def buttonnorth(nbutton):
     pixel(64, nbutton)
 buttonnorth(10)
@@ -40,6 +40,10 @@ def sfill(south):
     for i in range(23, 26):
         pixel(i, south)
 sfill(4)
+
+
+
+
 def wfill(west):
     pixel(41, west)
     pixel(51, west)
@@ -50,6 +54,13 @@ def etfill(east):
     pixel(57, east)
     pixel(67, east)
 etfill(40)
+
+#border colour
+def box(white):
+	buttonid = [72, 73, 74, 75, 76, 66, 56, 46, 36, 35, 34, 33, 32, 42, 52, 62]
+	for i in buttonid:
+		pixel(i, white)
+box(3)
 #direction functions
 def pressnorth():
     
@@ -74,7 +85,7 @@ def pressmiddle():
 
 
 
-
+#press for feedback function
 for msg in inport:
     if msg.type == 'note_on' and msg.note == 64  and msg.velocity != 0:
         pressnorth()
@@ -86,3 +97,4 @@ for msg in inport:
         presseast()
     elif msg.type == 'note_on' and msg.note == 54 and msg.velocity != 0:
         pressmiddle()
+
