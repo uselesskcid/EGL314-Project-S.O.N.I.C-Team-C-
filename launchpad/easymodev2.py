@@ -98,3 +98,4 @@ for msg in inport:
     elif msg.type == 'note_on' and msg.note == 54 and msg.velocity != 0:
         pressmiddle()
 
+
