@@ -1,12 +1,8 @@
 ## System Diagram
 ```mermaid
 graph TD;
-A[Laptop]-->B[VNC Viewer]
-B-->A
-A-->C[Putty-SSH / WinSCP - SCP]
-C-->A
-C-->D[Network Router]
-D-->E[Raspberry Pi]
-F[Keyboard / Mouse]-->E
-E-->G[HDMI Monitor]
-```
+A[Powerbank]-Power->B[Raspverry Pi 4]
+B[Raspberry Pi 4]-OSC->C[Reaper DAW]
+B-->D[Launchpad Pro MK3]
+C-->B
+D-->B
