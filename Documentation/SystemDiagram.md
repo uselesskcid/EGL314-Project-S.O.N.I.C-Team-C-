@@ -2,10 +2,11 @@
 ```mermaid
 graph TD;
 A[Powerbank] --Power--> B[Raspberry Pi 4]
-B --> G[Laptop/Monitor]
+B --display--> G[Laptop/Monitor]
 B --OSC--> C[Reaper DAW]
-B --> D[Launchpad Pro MK3]
+B --MIDI--> D[Launchpad Pro MK3]
 C --L-ISA Audio Bridge--> E[L-ISA Processor]
-D-->B
+D --MIDI--> B
 E --Special Metadata--> F[L-ISA Controller]
 F --Special Metadata--> E
+F --D/A--> H[Speakers]
