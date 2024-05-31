@@ -86,7 +86,7 @@ def etfill(east):
     pixel(67, east)
 
 def box(white):
-    buttonid = [72, 73, 74, 75, 76, 66, 56, 46, 36, 35, 34, 33, 32, 42, 52, 62]
+    buttonid = [73, 74, 75, 66, 56, 46, 35, 34, 33, 42, 52, 62]
     for i in buttonid:
         pixel(i, white)
 
