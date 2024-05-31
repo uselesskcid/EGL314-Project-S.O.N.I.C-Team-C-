@@ -27,8 +27,7 @@ Project S.O.N.I.C (Sensory Observation Ninja Immersive Challenge) is an experien
 Participants are to listen, remember, and replicate complex sequences of sounds.<br>
 Player to interact with a 360° customized touchpad to indicate the memory sequence.<br>
 <br>
-<br>
-One Player interacting with MIDI Launchpad Pro MK3 (360° customized touchpad). <br>
+Only one Player interacting with MIDI Launchpad Pro MK3 (360° customized touchpad). <br>
 
 
 <details open>
