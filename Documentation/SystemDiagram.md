@@ -20,4 +20,4 @@ F --D/A--> H[Speakers]
 I --DMX universe 1--> J[Digi Fan]
 I --DMX universe 2--> L[Hanging Lights]
 
-J --wireless DMX Tx/Rx--> K[Smoke Machine]
+J --wireless DMX--> K[Smoke Machine]
