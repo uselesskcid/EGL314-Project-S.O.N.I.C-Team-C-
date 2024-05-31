@@ -12,4 +12,4 @@ E --Special Metadata--> F[L-ISA Controller]
 F --Special Metadata--> E
 F --D/A--> H[Speakers]
 G --DMX universe 1--> H[Digi Fan]
-H --wireless dmx Tx & Rx--> [Smoke Machine]
+H --wireless dmx Tx & Rx--> I[Smoke Machine]
