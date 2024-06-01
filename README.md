@@ -62,9 +62,9 @@ Team C would like to specially thank, **Mr. Fu YongWei** (<a href="https://githu
 ## Contributors to this Project:
 [//]: contributor-faces
 Team Members: 
-<a href="https://github.com/uselesskcid"><img src="https://github.com/account" title="uselesskcid" width="50" height="50"></a>
-<a href="https://github.com/ihave10minutes"><img src="https://avatars.githubusercontent.com/u/167286782?v=4" title="ihave10minutes" width="50" height="50"></a>
-<a href="https://github.com/Robloxer9000"><img src="https://avatars.githubusercontent.com/u/167287547?v=4" title="Robloxer9000" width="50" height="50"></a>
+**Dick** (Team Leader) <a href="https://github.com/uselesskcid"><img src="https://github.com/account" title="uselesskcid" width="50" height="50"></a>
+**Lennon** (Co-Lead) <a href="https://github.com/ihave10minutes"><img src="https://avatars.githubusercontent.com/u/167286782?v=4" title="ihave10minutes" width="50" height="50"></a>
+**Quan Feng** (Member) <a href="https://github.com/Robloxer9000"><img src="https://avatars.githubusercontent.com/u/167287547?v=4" title="Robloxer9000" width="50" height="50"></a>
 
 Open Source Contributors:
-<a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"></a>
+**Travis** (Classmate) <a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"></a>
