@@ -62,6 +62,7 @@ Team C would like to specially thank, <a href="https://github.com/ywfumav" title
 ## Contributors to this Project:
 [//]: contributor-faces
 Team Members:<br>
+<a href="https://github.com/uselesskcid"><img src="https://avatars.githubusercontent.com/u/123967722?v=4" title="uselesskcid" width="50" height="50"><strong>Dick (Team Leader)</strong></a>
 **Dick** (Team Leader) <a href="https://github.com/uselesskcid"><img src="https://avatars.githubusercontent.com/u/123967722?v=4" title="uselesskcid" width="50" height="50"></a><br>
 **Lennon** (Co-Lead) <a href="https://github.com/ihave10minutes"><img src="https://avatars.githubusercontent.com/u/167286782?v=4" title="ihave10minutes" width="50" height="50"></a><br>
 **Quan Feng** (Member) <a href="https://github.com/Robloxer9000"><img src="https://avatars.githubusercontent.com/u/167287547?v=4" title="Robloxer9000" width="50" height="50"></a><br>
