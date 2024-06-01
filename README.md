@@ -66,5 +66,7 @@ Team Members:<br>
 **Lennon** (Co-Lead) <a href="https://github.com/ihave10minutes"><img src="https://avatars.githubusercontent.com/u/167286782?v=4" title="ihave10minutes" width="50" height="50"></a><br>
 **Quan Feng** (Member) <a href="https://github.com/Robloxer9000"><img src="https://avatars.githubusercontent.com/u/167287547?v=4" title="Robloxer9000" width="50" height="50"></a><br>
 <br>
+<br>
+<br>
 Open Source Contributors:<br>
 **Travis** (Classmate) <a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"></a>
