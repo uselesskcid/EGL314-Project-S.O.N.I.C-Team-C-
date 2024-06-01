@@ -57,7 +57,7 @@ Please follow these instructions.
 - **[Launchpad Pro MK3 Programmer’s reference manual download](https://downloads.novationmusic.com/novation/launchpad-mk3/launchpad-pro-mk3-0)** - Configuring and creating customized launchpad
 
 ## Credits
-Team C would like to specially thank, <a href="https://github.com/ywfumav" title="ywfumav" **Mr. Fu YongWei**>  from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.
+Team C would like to specially thank, <a href="https://github.com/ywfumav" title="ywfumav"><strong>Mr. Fu YongWei</strong></a> from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.
 
 ## Contributors to this Project:
 [//]: contributor-faces
