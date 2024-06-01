@@ -5,19 +5,23 @@ A[Powerbank] --Power--> B[Raspberry Pi 4]
 
 B --display--> G[Laptop/Monitor]
 B --OSC--> C[Reaper DAW]
-B --MIDI--> D[Launchpad Pro MK3]
+B --USB MIDI--> D[Launchpad Pro MK3]
 
 C --L-ISA Audio Bridge--> E[L-ISA Processor]
 C --MIDI timecode--> I[GrandMA3]
 
-D --MIDI--> B
+D --USB MIDI--> B
 
-E --Special Metadata--> F[L-ISA Controller]
+E --Spatial Metadata--> F[L-ISA Controller]
 
-F --Special Metadata--> E
-F --D/A--> H[Speakers]
+F --Spatial Metadata--> E
+F --LAN--> H[Yamaha QL1]
+
+H --DANTE--> L[Amplifier]
 
 I --DMX universe 1--> J[Digi Fan]
-I --DMX universe 2--> L[Hanging Lights]
+I --sACN--> L[Hanging Lights]
 
 J --wireless DMX--> K[Smoke Machine]
+
+L --Speaker Cables--> M[Speakers]
