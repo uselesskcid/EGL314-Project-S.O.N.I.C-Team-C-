@@ -15,13 +15,13 @@ D --USB MIDI--> B
 E --Spatial Metadata--> F[L-ISA Controller]
 
 F --Spatial Metadata--> E
-F --LAN--> H[Yamaha QL1]
+F --LAN DANTE--> H[Yamaha QL1]
 
-H --DANTE--> M[Amplifier]
+H --LAN DANTE--> M[Amplifier]
 
 I --DMX universe 1--> J[Digi Fan]
 I --sACN--> L[Hanging Lights]
 
 J --wireless DMX--> K[Smoke Machine]
 
-M --Speaker Cables--> N[Speakers]
+M --> N[Speakers]
