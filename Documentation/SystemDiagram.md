@@ -17,11 +17,11 @@ E --Spatial Metadata--> F[L-ISA Controller]
 F --Spatial Metadata--> E
 F --LAN--> H[Yamaha QL1]
 
-H --DANTE--> L[Amplifier]
+H --DANTE--> M[Amplifier]
 
 I --DMX universe 1--> J[Digi Fan]
 I --sACN--> L[Hanging Lights]
 
 J --wireless DMX--> K[Smoke Machine]
 
-L --Speaker Cables--> M[Speakers]
+M --Speaker Cables--> N[Speakers]
