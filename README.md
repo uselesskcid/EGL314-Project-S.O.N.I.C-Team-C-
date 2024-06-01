@@ -55,3 +55,16 @@ Please follow these instructions.
 - **[Huats Club - oscstarterkit](https://github.com/huats-club/oscstarterkit)** - Introductions to Python Open Sound Control for AV
 - **[Huats Club - mts_sensor_cookbook](https://github.com/huats-club/mts_sensor_cookbook)** - Basics for MIDI controls
 - **[Launchpad Pro MK3 Programmer’s reference manual download](https://downloads.novationmusic.com/novation/launchpad-mk3/launchpad-pro-mk3-0)** - Configuring and creating customized launchpad
+
+## Credits
+Team C would like to specially thank, **Mr. Fu YongWei** (<a href="https://github.com/ywfumav" title="**ywfumav**">) from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.
+
+## Contributors to this Project:
+[//]: contributor-faces
+Team Members: 
+<a href="https://github.com/uselesskcid"><img src="https://github.com/account" title="uselesskcid" width="50" height="50"></a>
+<a href="https://github.com/ihave10minutes"><img src="https://avatars.githubusercontent.com/u/167286782?v=4" title="ihave10minutes" width="50" height="50"></a>
+<a href="https://github.com/Robloxer9000"><img src="https://avatars.githubusercontent.com/u/167287547?v=4" title="Robloxer9000" width="50" height="50"></a>
+
+Open Source Contributors:
+<a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"></a>
