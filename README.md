@@ -68,4 +68,4 @@ Team Members:<br>
 <br>
 <br>
 Open Source Contributors:<br>
-<a href="https://github.com/tl0wh"><img src="ttps://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"><strong> Travis (Classmate)</strong></a><br>
+<a href="https://github.com/tl0wh"><img src="https://avatars.githubusercontent.com/u/169418560?v=4=4" title="tl0wh" width="50" height="50"><strong> Travis (Classmate)</strong></a><br>
