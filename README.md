@@ -29,6 +29,18 @@ Player to interact with a 360° customized touchpad to indicate the memory seque
 <br>
 Only one Player interacting with MIDI Launchpad Pro MK3 (360° customized touchpad). <br>
 
+<details open>
+<summary>
+  Features
+</summary>
+<ul>
+  <li>L-ISA to create distinct sequences of sounds that vary in parameters (e.g. localizations, frequencies, etc) </li>
+  <li>Adjustable difficulties where sequences can gradually increase in complexity (e.g. length, pitch, etc). </li>
+  <li> Interactive Feedback – teams may consider integrating visual and tactile feedback as hints or penalties. </li>
+</ul>
+</details>
+
+
 ## System Diagram
 ```mermaid
 graph TD;
@@ -57,17 +69,6 @@ J --wireless DMX--> K[Smoke Machine]
 
 M --> N[Speakers]
 ```
-
-<details open>
-<summary>
-  Features
-</summary>
-<ul>
-  <li>L-ISA to create distinct sequences of sounds that vary in parameters (e.g. localizations, frequencies, etc) </li>
-  <li>Adjustable difficulties where sequences can gradually increase in complexity (e.g. length, pitch, etc). </li>
-  <li> Interactive Feedback – teams may consider integrating visual and tactile feedback as hints or penalties. </li>
-</ul>
-</details>
 
 ## Credits
 Team C would like to specially thank, <a href="https://github.com/ywfumav" title="ywfumav"><strong>Mr. Fu YongWei</strong></a>   from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.

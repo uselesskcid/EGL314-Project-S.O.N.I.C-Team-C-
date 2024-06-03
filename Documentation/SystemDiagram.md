@@ -1,28 +1,36 @@
 ## System Diagram
 ```mermaid
 graph TD;
-A[Powerbank] --Power--> B[Raspberry Pi 4]
+A[Powerbank] --Power--> B[Raspberry Pi 4 (Master)]
 
-B --display--> G[Laptop/Monitor]
-B --OSC--> C[Reaper DAW]
-B --USB MIDI--> D[Launchpad Pro MK3]
+B --OSC--> C[Raspberry Pi 4 (Slave)]
+B --LAN/Wifi + OSC/MTC--> D[Master Laptop]
 
-C --L-ISA Audio Bridge--> E[L-ISA Processor]
-C --MIDI timecode--> I[GrandMA3]
+C --OSC--> B
+C --LAN/Wifi + MIDI--> M[Laptop/Monitor]
 
-D --USB MIDI--> B
+D --Running OSC--> E[GrandMA3 Lighting Console]
+D --Running MTC--> G[Reaper DAW]
 
-E --Spatial Metadata--> F[L-ISA Controller]
+E --sACN--> F[Hanging Lights<br> Ayrton Mistral, Magicblade, Minipanel, Showline ePar]
+E --universe 1--> O[Smoke Machine<br> GeForce]
 
-F --Spatial Metadata--> E
-F --LAN DANTE--> H[Yamaha QL1]
+G --Dante VSC--> H[L-ISA Processor]
 
-H --LAN DANTE--> M[Amplifier]
+H --Dante VSC--> G
+H --Spatial Metadata--> I[L-ISA Controller]
 
-I --DMX universe 1--> J[Digi Fan]
-I --sACN--> L[Hanging Lights]
+I --Spatial Metadata--> H
+I --Dante LAN--> J[Audio Mixer<br> Yamaha QL1]
 
-J --wireless DMX--> K[Smoke Machine]
+J --Dante LAN--> I
+J --Dante LAN--> K[Amplifier<br> Yamaha XMV8140D]
 
-M --> N[Speakers]
+K --Speaker Cable to Euroblock (4P)--> L[12x Speakers<br> Yamaha VXS5]
+
+M --Running MIDI--> N[360° customized touchpad<br> Launchpad Pro MK3]
+
+N --MIDI--> M
+
+O --wireless DMX--> P[Smoke Machine]
 ```
