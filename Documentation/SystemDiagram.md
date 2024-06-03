@@ -1,9 +1,9 @@
 ## System Diagram
 ```mermaid
 graph TD;
-A[Powerbank] --Power--> B[Raspberry Pi 4 "Master"]
+A[Powerbank] --Power--> B[Raspberry Pi 4 Master]
 
-B --OSC--> C[Raspberry Pi 4 ("Slave"]
+B --OSC--> C[Raspberry Pi 4 Slave]
 B --LAN/Wifi + OSC/MTC--> D[Master Laptop]
 
 C --OSC--> B
