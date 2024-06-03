@@ -28,9 +28,9 @@ J --Dante LAN--> K[Amplifier<br> Yamaha XMV8140D]
 
 K --Speaker Cable to Euroblock (4P)--> L[12x Speakers<br> Yamaha VXS5]
 
-M --Running MIDI--> N[360° customized touchpad<br> Launchpad Pro MK3]
+M --Running USB MIDI--> N[360° customized touchpad<br> Launchpad Pro MK3]
 
-N --MIDI--> M
+N --USB MIDI--> M
 
 O --wireless DMX--> P[Smoke Machine]
 ```
