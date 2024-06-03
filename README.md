@@ -29,6 +29,34 @@ Player to interact with a 360° customized touchpad to indicate the memory seque
 <br>
 Only one Player interacting with MIDI Launchpad Pro MK3 (360° customized touchpad). <br>
 
+## System Diagram
+```mermaid
+graph TD;
+A[Powerbank] --Power--> B[Raspberry Pi 4]
+
+B --display--> G[Laptop/Monitor]
+B --OSC--> C[Reaper DAW]
+B --USB MIDI--> D[Launchpad Pro MK3]
+
+C --L-ISA Audio Bridge--> E[L-ISA Processor]
+C --MIDI timecode--> I[GrandMA3]
+
+D --USB MIDI--> B
+
+E --Spatial Metadata--> F[L-ISA Controller]
+
+F --Spatial Metadata--> E
+F --LAN DANTE--> H[Yamaha QL1]
+
+H --LAN DANTE--> M[Amplifier]
+
+I --DMX universe 1--> J[Digi Fan]
+I --sACN--> L[Hanging Lights]
+
+J --wireless DMX--> K[Smoke Machine]
+
+M --> N[Speakers]
+```
 
 <details open>
 <summary>
@@ -40,21 +68,6 @@ Only one Player interacting with MIDI Launchpad Pro MK3 (360° customized touchp
   <li> Interactive Feedback – teams may consider integrating visual and tactile feedback as hints or penalties. </li>
 </ul>
 </details>
-
-## Preparing Raspberry Pi:
-Please follow these instructions.
-- **[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)**
-
-## Tutorials:
-
-
-
-
-## References and Sources:
-- **[Huats Club - rpistarterkit](https://github.com/huats-club/rpistarterkit)** - Configuring and preparing a new Raspberry Pi
-- **[Huats Club - oscstarterkit](https://github.com/huats-club/oscstarterkit)** - Introductions to Python Open Sound Control for AV
-- **[Huats Club - mts_sensor_cookbook](https://github.com/huats-club/mts_sensor_cookbook)** - Basics for MIDI controls
-- **[Launchpad Pro MK3 Programmer’s reference manual download](https://downloads.novationmusic.com/novation/launchpad-mk3/launchpad-pro-mk3-0)** - Configuring and creating customized launchpad
 
 ## Credits
 Team C would like to specially thank, <a href="https://github.com/ywfumav" title="ywfumav"><strong>Mr. Fu YongWei</strong></a>   from **Nanyang Polytechnic** for overseeing our project phase and supplying us with base-source codes.

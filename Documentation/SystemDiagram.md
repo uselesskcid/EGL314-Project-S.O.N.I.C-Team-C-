@@ -25,3 +25,4 @@ I --sACN--> L[Hanging Lights]
 J --wireless DMX--> K[Smoke Machine]
 
 M --> N[Speakers]
+```
