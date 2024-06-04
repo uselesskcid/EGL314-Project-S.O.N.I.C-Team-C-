@@ -1,43 +1,36 @@
 import mido
 
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
-outport = mido.open_output(midipad)  # output port for sending commands
-inport = mido.open_input(midipad)  # input port for feedback from launchpad
+outport = mido.open_output(midipad)  # Output port for sending commands
+inport = mido.open_input(midipad)  # Input port for feedback from launchpad
 
 # Dictionary to store original colors
-ogcolour = {     #output command for setting up colour \/
-    64: 10,  # Colours for NORTH
+ogcolour = {
+    64: 10,  # Colors for NORTH
     83: 10,  
     84: 10, 
     85: 10,
-    44: 4,   # Colours for South
+    44: 4,   # Colors for SOUTH
     23: 4,
     24: 4,
     25: 4,   
-    55: 40,  # Colours for EAST
+    55: 40,  # Colors for EAST
     57: 40,
     47: 40,
     67: 40,
-    53: 30,    # Colours for WEST
+    53: 30,  # Colors for WEST
     51: 30,
     41: 30,
     61: 30
-    
-    
-    
-    
-    
-    
-    
 }
 
-# Function to light up 1 pixel
-def pixel(buttonid, colour): #output command for setting up colour \/
+# Function to light up 1 pixel (output command)
+def pixel(buttonid, colour):
     msg = mido.Message('note_on', note=buttonid, velocity=colour)
-    outport.send(msg)
+    outport.send(msg)  # Output command
 
-# Initialize button colors
-def initialize_buttons(): #output command for setting up colour \/
+# Initialize button colors (output command)
+def initialize_buttons():
     pixel(64, ogcolour[64])
     for i in range(83, 86):
         pixel(i, ogcolour[i])
@@ -52,7 +45,8 @@ def initialize_buttons(): #output command for setting up colour \/
     etfill(40)
     box(3)
 
-def buttonnorth(nbutton): #output command for setting up colour \/
+# Functions to set button colors (output commands)
+def buttonnorth(nbutton):
     pixel(64, nbutton)
 
 def buttonsouth(sbutton):
@@ -71,7 +65,7 @@ def nfill(north):
     for i in range(83, 86):
         pixel(i, north)
 
-def sfill(south):    #output command for setting up colour \/
+def sfill(south):
     for i in range(23, 26):
         pixel(i, south)
 
@@ -90,87 +84,79 @@ def box(white):
     for i in buttonid:
         pixel(i, white)
 
-initialize_buttons() #output command for setting up colour
+initialize_buttons()  # Output command to set up initial colors
 
-# Direction functions
-def pressnorth():  #input feedback from buttons  \/
+# Direction functions (input and output commands)
+def pressnorth():  # Input feedback from buttons
     print("NORTH")
-    pixel(64, 3)  # Change to white
+    pixel(64, 3)  # Change to white (output command)
     for i in [83, 84, 85]:
-        pixel(i, 3)  # Change to white
+        pixel(i, 3)  # Change to white (output command)
 
-def releasenorth(): #output command to return original colour \/
-    pixel(64, ogcolour[64])  # Change back to original color
+def releasenorth():  # Output command to return to original color
+    pixel(64, ogcolour[64])  # Change back to original color (output command)
     for i in [83, 84, 85]:
-        pixel(i, ogcolour[i])  # Change back to original color
+        pixel(i, ogcolour[i])  # Change back to original color (output command)
 
-def presssouth():    #input feedback from buttons  \/
+def presssouth():  # Input feedback from buttons
     print("SOUTH")
-    pixel(44, 3)  # Change to white
+    pixel(44, 3)  # Change to white (output command)
     for i in [23, 24, 25]:
-        pixel(i, 3)  # Change to white
+        pixel(i, 3)  # Change to white (output command)
 
-def releasesouth():  #output command to return original colour \/
-    pixel(44, ogcolour[44])  # Change back to original color
+def releasesouth():  # Output command to return to original color
+    pixel(44, ogcolour[44])  # Change back to original color (output command)
     for i in [23, 24, 25]:
-        pixel(i, ogcolour[i])  # Change back to original color
+        pixel(i, ogcolour[i])  # Change back to original color (output command)
 
-def presswest():    #input feedback from buttons     \/
+def presswest():  # Input feedback from buttons
     print("WEST")
-    pixel(53, 3)  # Change to white
+    pixel(53, 3)  # Change to white (output command)
     for i in [51, 61, 41]:
-        pixel(i, 3)  # Change to white
+        pixel(i, 3)  # Change to white (output command)
 
-def releasewest():        #output command to return original colour \/
-    pixel(53, ogcolour[53])  # Change back to original color
+def releasewest():  # Output command to return to original color
+    pixel(53, ogcolour[53])  # Change back to original color (output command)
     for i in [51, 61, 41]:
-        pixel(i, ogcolour[i])  # Change back to original color
+        pixel(i, ogcolour[i])  # Change back to original color (output command)
 
-def presseast():     #input feedback from buttons     \/
+def presseast():  # Input feedback from buttons
     print("EAST")
-    pixel(55, 3)  # Change to white
+    pixel(55, 3)  # Change to white (output command)
     for i in [57, 67, 47]:
-        pixel(i, 3)  # Change to white
+        pixel(i, 3)  # Change to white (output command)
 
-def releaseeast(): #output command to return original colour \/
-    pixel(55, ogcolour[55])  # Change back to original color
+def releaseeast():  # Output command to return to original color
+    pixel(55, ogcolour[55])  # Change back to original color (output command)
     for i in [57, 67, 47]:
-        pixel(i, ogcolour[i])  # Change back to original color
+        pixel(i, ogcolour[i])  # Change back to original color (output command)
 
-
-
-
-def pressmiddle():    #input feedback from buttons 
+def pressmiddle():  # Input feedback from buttons
     print("PLAYER'S POSITION")
 
-# Press for feedback function 
-for msg in inport:    #input feedback from buttons \/
+# Press for feedback function (input feedback from buttons)
+for msg in inport:
     if msg.type == 'note_on' or msg.type == 'note_off':
         if msg.note == 64:
             if msg.velocity != 0:  # North pressed
-                pressnorth() #input feedback from buttons 
+                pressnorth()  # Input feedback from buttons
             else:  # North released
-                releasenorth() #output command 
+                releasenorth()  # Output command
         elif msg.note == 44:
             if msg.velocity != 0:  # South pressed
-                presssouth() #input feedback from buttons 
-            else: 
-                releasesouth() # South released
-                               #output command 
-            
+                presssouth()  # Input feedback from buttons
+            else:  # South released
+                releasesouth()  # Output command
         elif msg.note == 53:
             if msg.velocity != 0:  # West pressed
-                presswest() #input feedback from buttons 
-            else: 
-                releasewest() # West released
-                                #output command 
-        elif msg.note == 55: 
+                presswest()  # Input feedback from buttons
+            else:  # West released
+                releasewest()  # Output command
+        elif msg.note == 55:
             if msg.velocity != 0:  # East pressed
-                presseast() #input feedback from buttons 
-            else: 
-                releaseeast() # East released
-                            #output command 
+                presseast()  # Input feedback from buttons
+            else:  # East released
+                releaseeast()  # Output command
         elif msg.note == 54 and msg.velocity != 0:
-            pressmiddle()
-
+            pressmiddle()  # Input feedback from buttons
 
