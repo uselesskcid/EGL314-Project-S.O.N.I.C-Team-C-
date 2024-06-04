@@ -3,16 +3,16 @@
 graph TD
 A[Raspberry Pi 4 Master] <--LAN/WiFi + OSC/MIDI --> B[Master Laptop]
 
-B --Running OSC--> C[Reaper DAW]
-B --Running OSC--> D[GrandMA3<br>Lighting Console]
-B --Running MIDI--> K[Launchpad Pro MK3<br>Customized Touchpad]
+B <--Running OSC--> C[Reaper DAW]
+B <--Running OSC--> D[GrandMA3<br>Lighting Console]
+B <--Running MIDI--> K[Launchpad Pro MK3<br>Customized Touchpad]
 
 
 C[Reaper<br>DAW] <--LAN Dante VSC --> F[L-ISA Processor]
 
 D <--LAN sACN--> E[Hanging Lights<br>Ayrton Mistral, Magicblade, Minipanel<br>Showline ePar]
 D <--universe 1--> M[Smoke Machine]
-M <--Wireless DMX Tx Rx--> N[DMX Fan]
+M <--Wireless DMX--> N[DMX Fan]
 
 F <--Spatial MetaData--> G[L-ISA Controller]
 F <--LAN Dante--> H[Mixer<br>Yamaha QL1]
