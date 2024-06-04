@@ -40,34 +40,28 @@ Only one Player interacting with MIDI Launchpad Pro MK3 (360° customized touchp
 </ul>
 </details>
 
-
-## System Diagram
+## System Diagram:
 ```mermaid
-graph TD;
-A[Powerbank] --Power--> B[Raspberry Pi 4]
+graph TD
+A[Raspberry Pi 4 Master] <--LAN/WiFi + OSC --> B[Master Laptop]
 
-B --display--> G[Laptop/Monitor]
-B --OSC--> C[Reaper DAW]
-B --USB MIDI--> D[Launchpad Pro MK3]
+B <--Running OSC--> C[Reaper DAW]
+B <--Running OSC--> D[GrandMA3<br>Lighting Console]
 
-C --L-ISA Audio Bridge--> E[L-ISA Processor]
-C --MIDI timecode--> I[GrandMA3]
+C[Reaper<br>DAW] <--LAN Dante VSC --> F[L-ISA Processor]
 
-D --USB MIDI--> B
+D <--LAN sACN--> E[Hanging Lights<br>Ayrton Mistral, Magicblade, Minipanel<br>Showline ePar]
+D <--universe 1--> M[Smoke Machine]
+M <--Wireless DMX--> N[DMX Fan]
 
-E --Spatial Metadata--> F[L-ISA Controller]
+F <--Spatial MetaData--> G[L-ISA Controller]
+G <--LAN Dante--> H[Mixer<br>Yamaha QL1]
+H <--LAN Dante--> I[Amplifier<br>Yamaha XMV8140D]
+I --Speaker Cable to Euroblock (4P)--> J[12 Speakers<br>Yamaha VXS5]
 
-F --Spatial Metadata--> E
-F --LAN DANTE--> H[Yamaha QL1]
-
-H --LAN DANTE--> M[Amplifier]
-
-I --DMX universe 1--> J[Digi Fan]
-I --sACN--> L[Hanging Lights]
-
-J --wireless DMX--> K[Smoke Machine]
-
-M --> N[Speakers]
+L[Raspberry Pi 4 Slave] <--MIDI<br>USB 3.0 to USB C--> K[Launchpad Pro MK3<br>Customized Touchpad] 
+L --display--> O[Laptop/Monitor]
+L <--OSC--> A 
 ```
 
 ## Credits
