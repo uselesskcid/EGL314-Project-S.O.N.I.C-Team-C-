@@ -13,7 +13,7 @@ D <--universe 1--> M[Smoke Machine]
 M <--Wireless DMX--> N[DMX Fan]
 
 F <--Spatial MetaData--> G[L-ISA Controller]
-F <--LAN Dante--> H[Mixer<br>Yamaha QL1]
+G <--LAN Dante--> H[Mixer<br>Yamaha QL1]
 H <--LAN Dante--> I[Amplifier<br>Yamaha XMV8140D]
 I --Speaker Cable to Euroblock (4P)--> J[12 Speakers<br>Yamaha VXS5]
 
