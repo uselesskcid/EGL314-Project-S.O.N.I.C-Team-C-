@@ -12,7 +12,7 @@ C[Reaper<br>DAW] <--LAN Dante VSC --> F[L-ISA Processor]
 
 D <--LAN sACN--> E[Hanging Lights<br>Ayrton Mistral, Magicblade, Minipanel<br>Showline ePar]
 D <--universe 1--> M[Smoke Machine]
-M <--Wireless DMX Tx & Rx--> N[DMX Fan]
+M <--Wireless DMX Tx Rx--> N[DMX Fan]
 
 F <--Spatial MetaData--> G[L-ISA Controller]
 F <--LAN Dante--> H[Mixer<br>Yamaha QL1]
