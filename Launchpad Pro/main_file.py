@@ -36,7 +36,7 @@ def start_easy_mode():
     if current_mode != 'easy':  # Only start if not already in easy mode
         terminate_current_process()
         print("Starting easy mode...")
-        current_process = subprocess.Popen(['python', 'easymode.py'])  # Start easy mode subprocess
+        current_process = subprocess.Popen(['python', 'finaleasymode.py'])  # Start easy mode subprocess
         current_mode = 'easy'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
@@ -47,7 +47,7 @@ def start_hard_mode():
     if current_mode != 'hard':  # Only start if not already in hard mode
         terminate_current_process()
         print("Starting hard mode...")
-        current_process = subprocess.Popen(['python', 'hardmode2.py'])  # Start hard mode subprocess
+        current_process = subprocess.Popen(['python', 'finalhardmode.py'])  # Start hard mode subprocess
         current_mode = 'hard'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
