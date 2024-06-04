@@ -5,7 +5,7 @@ outport = mido.open_output(midipad)  # output port for sending commands
 inport = mido.open_input(midipad)  # input port for feedback from launchpad
 
 # Dictionary to store original colors
-ogcolour = {     
+ogcolour = {     #output command for setting up colour \/
     64: 10,  # Colours for NORTH
     83: 10,  
     84: 10, 
