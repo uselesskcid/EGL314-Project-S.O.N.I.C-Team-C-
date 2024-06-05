@@ -66,8 +66,7 @@ A few things to note before proceeding:
   Activate your Launchpad's **Custom Mode 8**. This is where our game will be played with the touch LED buttons. 
 
 **Hit the "Custom" button and then press the 8th bottom button on the far right.**
-     
-                                                                              ![ALT TEXT](./assets/launchpadpromk3pad.jpg) 
+![ALT TEXT](./assets/launchpadpromk3pad.jpg) 
 
 
 
