@@ -79,7 +79,7 @@ We will then need to find the button IDs for each LED button in order to start c
 
 Once you have note them all down, we can now start configuring our LED lights and our touch buttons for playing the game. 
 
- ***If you want to reset your LED buttons, switch to another custom mode(1 to 7), then come back to custom mode 8. The LED lights of the touch buttons will disappear and to get them back on you need to rerun your code. (Assuming you have already coded some colours to your LED touch buttons.)***
+ ***If you want to reset your LED lights/buttons, switch to another custom mode then come back to custom mode 8. The LED lights of the touch buttons will disappear.***
 
 
 
@@ -107,4 +107,4 @@ The two mode buttons will run the following modes:
  - Red: Hard mode([finalhardmode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finalhardmode.py))
 
  ![alttext](./assets/hardemode.jpeg)
- >The hard mode will consist of directions North East, East, South East, South West, West and South West which the buttons for inputting these directions will be in the white rectangular box.
+ >The hard mode will consist of directions North East, East, South East, South West, West and South West which the buttons for inputting these directions are in the white rectangular box.
