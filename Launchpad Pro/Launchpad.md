@@ -108,5 +108,10 @@ The two mode buttons on the bottom right corner will run the following:
  - Red: Hard mode ([finalhardmode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finalhardmode.py))
 
  ![alttext](./assets/hardemode.jpeg)
- >The hard mode will consist of directions North East, East, South East, South West, West and South West which the buttons for inputting these directions are in the white rectangular box
+ >The hard mode will consist of directions North East, East, South East, South West, West and South West which the playable buttons are in the white rectangular box.
+
+### How does it work?
+
+
+
 
