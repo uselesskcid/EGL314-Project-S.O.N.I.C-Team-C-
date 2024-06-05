@@ -97,14 +97,14 @@ This is the file that we will be using to operate our whole memory sequence game
 
 
 The two mode buttons will run the following modes:
- - Green: Easy mode([finaleasymode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finaleasymode.py))
+ - Green: Easy mode ([finaleasymode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finaleasymode.py))
  
  ![alttext](./assets/easymode.jpeg)
 
 
 
  >The easy mode will consist of directions North, South, East and West, with the buttons being inside the white circle.
- - Red: Hard mode([finalhardmode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finalhardmode.py))
+ - Red: Hard mode ([finalhardmode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finalhardmode.py))
 
  ![alttext](./assets/hardemode.jpeg)
  >The hard mode will consist of directions North East, East, South East, South West, West and South West which the buttons for inputting these directions are in the white rectangular box.
