@@ -3,7 +3,7 @@ Station 5 Game Pad
 </h1>
 
 <p align="center">
-<i align="center">Touch-based gamepad using Novation's Launchpad Pro MK3 </i>⚙
+<i align="center">Touch-based gamepad using Novation's Launchpad Pro MK3 </i>
 </p>
 
 
