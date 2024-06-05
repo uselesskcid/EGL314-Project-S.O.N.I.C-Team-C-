@@ -70,7 +70,7 @@ A few things to note before proceeding:
 
 
 
-- We will then need to find the button IDs for each LED button in order to start configuring our buttons as well as other LED lights on the Launchpad. You can choose to refer to the [Launchpad Pro MK3's Programmer's manual](https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf), or you can follow the tutorial on [huats-club](https://github.com/huats-club/mts_sensor_cookbook/blob/main/4.%20midi/midi.md)
+We will then need to find the button IDs for each LED button in order to start configuring our buttons as well as other LED lights on the Launchpad. You can choose to refer to the [Launchpad Pro MK3's Programmer's manual](https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf), or you can follow the tutorial on [huats-club](https://github.com/huats-club/mts_sensor_cookbook/blob/main/4.%20midi/midi.md)
 
 
 ![ALT TEXT](./assets/LPButtonIDDiagram.png) 
