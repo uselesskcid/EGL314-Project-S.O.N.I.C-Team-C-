@@ -67,7 +67,7 @@ A few things to note before proceeding:
 
 **Hit the "Custom" button and then press the 8th bottom button on the far right.**
      
-![ALT TEXT](./assets/launchpadpromk3pad.jpg) 
+                                                                              ![ALT TEXT](./assets/launchpadpromk3pad.jpg) 
 
 
 
