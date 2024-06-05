@@ -67,14 +67,14 @@ A few things to note before proceeding:
 
 **Hit the "Custom" button and then press the 8th bottom button on the far right.**
      
-![ALT TEXT](../assets/) 
+![ALT TEXT](./assets/launchpadpromk3pad.jpg) 
 
 
 
  We will then need to find the button IDs for each LED button in order to start configuring our buttons as well as other LED lights on the Launchpad. You can choose to refer to the [Launchpad Pro MK3's Programmer's manual](https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf), or you can follow the tutorial on [huats-club](https://github.com/huats-club/mts_sensor_cookbook/blob/main/4.%20midi/midi.md)
 
 
-![ALT TEXT](../Pictures/Screenshots/LPButtonIDDiagram.png) 
+![ALT TEXT](./assets/LPButtonIDDiagram.png) 
 
 >On the center of your launchpad, there is an 8x8 LED button layout labelled together with their respective button IDs. You would need to use these button IDs inside your code in order to configure your LED displays and buttons.
 
@@ -94,14 +94,15 @@ This is the file that we will be using to operate our whole memory sequence game
 - In the file, we have coded it so that it starts off with a single start buttton.
  Once the start button is pressed, the layout of the starting game mode will appear, and we can switch between easy and hard mode using 2 buttons on the bottom right corner.
 
+
 The two mode buttons will run the following modes:
  - Green: Easy mode([finaleasymode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finaleasymode.py))
  
- ![alttext](../Pictures/easymode.jpeg)
+ ![alttext](./assets/easymode.jpeg)
 
 
  >The easy mode will consist of directions North, South, East and West, with the buttons being inside the white circle.
  - Red: Hard mode([finalhardmode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finalhardmode.py))
 
- ![alttext](../Pictures/hardemode.jpeg)
+ ![alttext](./assets/hardemode.jpeg)
  >The hard mode will consist of directions North East, East, South East, South West, West and South West which the buttons for inputting these directions will be in the white rectangular box.
