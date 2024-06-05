@@ -96,7 +96,7 @@ This is the file that we will be using to operate our whole memory sequence game
 
 
 
-The two mode buttons will run the following modes:
+The two mode buttons on the bottom right corner will run the following:
  - Green: Easy mode ([finaleasymode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finaleasymode.py))
  
  ![alttext](./assets/easymode.jpeg)
