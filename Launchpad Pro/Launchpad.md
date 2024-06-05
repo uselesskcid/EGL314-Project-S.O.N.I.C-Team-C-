@@ -75,7 +75,7 @@ A few things to note before proceeding:
 
 ![ALT TEXT](./assets/LPButtonIDDiagram.png) 
 
--On the center of your launchpad, there is an 8x8 LED button layout labelled together with their respective button IDs. You would need to use these button IDs inside your code in order to configure your LED displays and buttons.
+- On the center of your launchpad, there is an 8x8 LED button layout labelled together with their respective button IDs. You would need to use these button IDs inside your code in order to configure your LED displays and buttons.
 
 Once you have note them all down, we can now start configuring our LED lights and our touch buttons for playing the game. 
 
