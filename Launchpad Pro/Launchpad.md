@@ -88,7 +88,7 @@ Once you have note them all down, we can now start configuring our LED lights an
 
 This is the file that we will be using to operate our whole memory sequence game: 
 
-- The file we will be solely running on is our [main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/main_file.py) whch is the master file that sets up the whole game and  controls the running proccesses of each individual game mode.
+- The file we will be solely running on is our main file ([main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/main_file.py)) whch is the master file that sets up the whole game and  controls the running proccesses of each individual game mode.
 
 ![alttext](./assets/launchpadgif.gif)
  >In the file, we have coded it so that it starts off with a single start buttton.
