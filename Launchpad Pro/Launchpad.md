@@ -38,7 +38,6 @@ A few things to note before proceeding:
 
      ```
     pip install mido
-    pip install python-rtmidi
      ```
       After you have installed both modules, you can proceed to check the **input and outport ports** of your Launchpad. We will need the **MIDI input port** in order to get our code to run from our Rasberry Pi to our Launchpad.  
        
