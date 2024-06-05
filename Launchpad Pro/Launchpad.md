@@ -58,7 +58,7 @@ A few things to note before proceeding:
      print(output_name)
      ```
      
-     You would then be able to see three input ports from your Launchpad. Note down the one with the MIDI input port.
+     -You would then be able to see three input ports from your Launchpad. Note down the one with the MIDI input port.
      
 
 
