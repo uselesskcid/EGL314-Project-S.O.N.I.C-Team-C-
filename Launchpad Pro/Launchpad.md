@@ -90,14 +90,17 @@ This is the file that we will be using to operate our whole memory sequence game
 
 >The file we will be solely running on is our [main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/main_file.py) whch is the master file that sets up the whole game and  controls the running proccesses of each individual game mode.
 
-- In the file, we have coded it so that it starts off with a single start buttton.
+![alttext](./assets/start.mp4)
+ >In the file, we have coded it so that it starts off with a single start buttton.
  Once the start button is pressed, the layout of the starting game mode will appear, and we can switch between easy and hard mode using 2 buttons on the bottom right corner.
+
 
 
 The two mode buttons will run the following modes:
  - Green: Easy mode([finaleasymode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/finaleasymode.py))
  
  ![alttext](./assets/easymode.jpeg)
+
 
 
  >The easy mode will consist of directions North, South, East and West, with the buttons being inside the white circle.
