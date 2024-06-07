@@ -239,7 +239,7 @@ The code file that we will only be running on our Raspberry Pi terminal is our *
  - The start button is coded inside the main file to start and load the whole game on the Launchpad.
  - The functions of the two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load the easy or hard mode depending on which difficulty mode button the player presses.
 - The difficulty mode buttons can be pressed when the easy or hard mode is on the Launchpad.
-- More modules are imported in this file such as time, subprocess and threading in order to create functions to run one difficulty mode at a time 
+- More modules are imported in this file such as ```time```, ```subprocess``` and ```threading``` in order to create functions to run one difficulty mode at a time.
 
 
 
