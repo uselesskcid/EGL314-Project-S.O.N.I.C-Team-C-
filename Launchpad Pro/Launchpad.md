@@ -152,7 +152,7 @@ We made 3 ```python``` files: one for easymode, one for hard mode and then anoth
 
 - Hard mode file: **[hardmode_june5.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/hardmode_june5.py)**
 
-For all three files, we need to start off by making sure that the Raspberry Pi is sending messages to  
+For all three files, we need to start off by making sure that the Raspberry Pi is can communicate with the Raspberry Pi through MIDI.
 
 First we need to import the mido library.
 ```
