@@ -2,7 +2,7 @@ import tkinter as tk
 import POC_FunctionStorage as fs
 
 main = tk.Tk()
-main.title("Team C L-ISA Controller")
+main.title("Team C GUI")
 
 tabLabelMA3=tk.Label(main,text="GRANDMA3", font="20" )
 ma3_91_btn = tk.Button(main, text="Suspense (91)", bg="GREEN",command=fs.MA3_Seq91,width=20,height=5)
