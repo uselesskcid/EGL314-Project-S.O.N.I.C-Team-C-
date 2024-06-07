@@ -73,7 +73,7 @@ You would then be able to see three input ports from your Launchpad. Note down t
 Then, we will need to find the ID number for each LED on the Launchpad to start configuring our buttons as well as assigning colours to each LED on the Launchpad. 
 
 
-![ALT TEXT](./assets/LaunchpadButtonIDs.png) 
+![ALT TEXT](./assets/buttonid.png) 
 
 >- On the central area of your Launchpad, there is an 8x8 LED layout in which the LEDS can be controlled with their respective numerical ID numbers. You will need to use those ID numbers inside your code in order to configure your LED lights and buttons.     
 
