@@ -133,9 +133,11 @@ You are greeted with a single start buttton on the Launchpad.
  ![alttext](./assets/hardlayout.jpeg)
  >The hard mode consists of four directions: North, South, East and West, with the playable buttons being inside the white circle.
 
-For each game mode, the layout represents the directions the player has to look out for in an environment.
+**During each game mode, Players have to look out for audio cues and memorize the order of directions of the sound. They then have to press the Direction buttons in the middle according to that order.**
+
+The layout represents the directions the player has to look out for in the environment.
 - The environment includes different colours representing different directions of sound.(excluding the hard and easy mode buttons)
-- The directional buttons are coloured according to respective their directions.
+- The Direction buttons are coloured according to respective their directions.
 - The white LED on the center of the layout represents the player's position
 
 
@@ -220,14 +222,14 @@ for msg in inport:
 
 
 ### Easy mode file
-The layout for easy mode shows up when this file is loaded. Players can input the Left and Right directions with the buttons during the memory sequence.
+The layout for easy mode shows up when this file is loaded. Players can press the Left and Right buttons in order of the directions during the memory sequence.
 - The code contains the colours of the design layout for Easy mode on the Launchpad. 
 - 3 coloured LEDs to represent for the Left Direction, Right Direction and Submit Sequence buttons are programmed to send MIDI messages as feedback to the Raspberry Pi.
 - The 3 LED buttons are implemented with **visual colour feedback** by changing colour when pressed, and returning back to its original colour.
 
 
 ### Hard mode file
-The layout for hard mode shows up when this file is loaded. Players can input the North, South, East and West directions with the buttons during the memory sequence.
+The layout for hard mode shows up when this file is loaded. Players can press the North, South, East and West buttons in order of the directions during the memory sequence.
 - Contains the code for the design layout for Hard mode.
 - 5 colored LEDs to represent North, South, East, West and Submit Sequence  buttons coded to send MIDI feedback to the Raspberry Pi.
 - Visual feedback is also implemented for user experience.
