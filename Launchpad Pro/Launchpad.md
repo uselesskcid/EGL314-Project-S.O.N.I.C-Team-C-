@@ -131,13 +131,13 @@ You are greeted with a single start buttton on the Launchpad.
  ### Hard mode (Red)
 
  ![alttext](./assets/hardmode.jpeg)
- >The hard mode consists of four directions: North, South, East and West, with the playable buttons being inside the white circle.
+ >The hard mode consists of four directions: North, South, East and West, with the playable buttons being inside the white c
 
-For each game mode, the layout represents the environment in which the player has to me
-- The environment has different groups of speakers representing different directions of sound.
-- The playable buttons surrounding the player's position
-- The white button on the center of the layout represents the player's position.
-- The colored LEDs that are outside the white space represent the speakres, according to which direction they are from.
+For each game mode, the layout represents the directions the player has to look out for in an environment.
+- The environment includes different colours representing different directions of sound.(excluding the hard and easy mode buttons)
+- The directional buttons are coloured according to respective their directions.
+- The white LED on the center of the layout represents the player's position
+
 
 
 
@@ -146,13 +146,14 @@ For each game mode, the layout represents the environment in which the player ha
 
 We made 3 ```python``` files: one for easymode, one for hard mode and then another one for the main code that we will be using to run the overall code to operate our whole game.
 
-- Main file : **[main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro............../main_file.py)**
+- Main file : **[POC_Launchpad.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/POC_Launchpad.py)**
 
-- Easy mode file: **[easymode_june5.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC)**
+- Easy mode file: **[POC_LP_EasyMode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/POC_LP_EasyMode.py)**
 
-- Hard mode file: **[hardmode_june5.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/hardmode_june5.py)**
+- Hard mode file: **[POC_LP_HardMode.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro/POC_LP_HardMode.py)**
 
 For all three files, we need to start off by making sure that the Raspberry Pi is can communicate with the Raspberry Pi through MIDI.
+
 
 First we need to import the mido library.
 ```
@@ -173,21 +174,76 @@ inputport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 2
 >  - "mido.open_output" and "mido.open_input" are both functions from the mido library.
 > - Both the mido functions state the names for the input port and output ports of the Launchpad (Both are named ***'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'***) in order to open these ports for Launchpad and Raspberry Pi MIDI communication.
 
+### Adding colours (All files)
+
+To add colour to the LEDs, we would need to assign a colour code to the ID number of the LEDs. To find out the colour codes of the Launchpad, refer to the [Launchpad Pro Programmer's Manual.]((https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf))
+
+We need to start off by sending this output message to the Launchpad in order to tell it to light up 1 LED with a desired colour.
+```
+
+# Example 
+def pixel(buttonid, colour):
+     outputport.send(mido.Message('note_on', note=buttonid, velocity=colour))
+```
+> - The output port sends a MIDI message to the Launchpad.  'note_on' tells the LED to light up.
+> - For the Launchpad, 'note' is referred to as the button ID of an LED, and 'velocity' is referred to the colour of the LED to light up.
+> - 'pixel(buttonid, colour)' is defined as a function to light up 1 LED with a specific colour.
+
+
+
+After which you can start colouring your buttons. For example, if I want to colour 2 LEDs of my choice:
+```
+# Example:
+
+def light_mode_buttons():
+    led(17, 64)       # Colour (green)
+    led(18, 72)       # Colour (red)
+```
+
+> - The numbers **17** and **18** represent the ID numbers of the two LED buttons.
+> - The number **64** is the colour code for green, while the colour for red is **72**.
+
+### Button feedback (All files)
+
+We can also receive input feedback on our Raspberry Pi when pressing the LEDs on the Launchpad as they can also act as buttons for sending messages to the Raspberry Pi.
+
+```
+# Example 
+for msg in inport:  
+    if msg.type == 'note_on' or msg.type == 'note_off':
+        if msg.note == 17:
+            if msg.velocity != 0: 
+                print("17 pressed") 
+            else:  
+                print("17 released)  
+```
+
+
+These are the essential functions to start coding for the easy and hard mode files.
+
+For the main file, we need to import more modules from which 
+
+### Easy mode file
+- The code contains the colouration of the design layout for Easy mode on the Launchpad. 
+- 3 coloured LEDs to represent for the Left Direction, Right Direction and Submit Sequence buttons are programmed to send MIDI messages as feedback to the Raspberry Pi.
+- The 3 LED buttons are implemented with visual colour feedback by changing colour when pressed, and returning back to its original colour.
+
+### Hard mode file
+- Contains the code for the design layout for Hard mode.
+- 5 colored LEDs to represent North, South, East, West and Submit Sequence  buttons coded to send MIDI feedback to the Raspberry Pi.
+- Button feedback is also implemented for user experience.
+
 ### Main file
 
-The code file that we will only be running on our Raspberry Pi terminal is our main file ([main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro............../main_file.py)) whch is the master file that sets up the whole game and  controls the running process of each individual game mode. 
- - The start button is coded inside the main file to run whole game on the Launchpad.
- - The two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load both the easy and hard mode ```python``` code files depending on which button the player presses.
+The code file that we will only be running on our Raspberry Pi terminal is our **main file** whch is the master file that sets up the whole game and  controls the running process of each individual game mode. 
+ - The start button is coded inside the main file to start and load the whole game on the Launchpad.
+ - The functions of the two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load both the easy and hard mode ```python``` code files depending on which difficulty mode button the player presses.
 
-- The files for easy mode() and hard mode() consists of colouring code for the LEDs to implement their respective layout designs. 
-> - User button feedback is implemented
+
+
+
 
 
  
 
-In our ```Python``` codes, we assign colours to the LEDs on our Launchpad for the overall layout design including the functional buttons. 
 
-- For both easy and hard mode, we assigned colours for the buttons and 
-
-
-test
