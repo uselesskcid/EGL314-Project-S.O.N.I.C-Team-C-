@@ -30,11 +30,3 @@ Audio:
 - [L-ISA Controller](https://www.l-acoustics.com/products/l-isa-studio/) (Spatial object mixing software to create an immersive soundscape)
 - L-ISA Processor (Installed with L-ISA Controller)
 
-## Steps and instructions for Installation
-
-### Connectivity between grandMA3 and Raspberry Pi:
-
-
-
-## Configuration settings
-
