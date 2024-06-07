@@ -123,14 +123,14 @@ You are greeted with a single start buttton on the Launchpad.
  
  ### Easy mode (Green)
  
- ![alttext](./assets/easymode.jpeg)
+ ![alttext](./assets/easylayout.jpeg)
 
 
 
  >The easy mode consists of the most basic directions: Left and Right.
  ### Hard mode (Red)
 
- ![alttext](./assets/hardmode.jpeg)
+ ![alttext](./assets/hardlayout.jpeg)
  >The hard mode consists of four directions: North, South, East and West, with the playable buttons being inside the white c
 
 For each game mode, the layout represents the directions the player has to look out for in an environment.
@@ -224,7 +224,7 @@ These are the essential functions to start coding for the easy and hard mode fil
 For the main file, we need to import more modules from which 
 
 ### Easy mode file
-- The code contains the colouration of the design layout for Easy mode on the Launchpad. 
+- The code contains the colours of the design layout for Easy mode on the Launchpad. 
 - 3 coloured LEDs to represent for the Left Direction, Right Direction and Submit Sequence buttons are programmed to send MIDI messages as feedback to the Raspberry Pi.
 - The 3 LED buttons are implemented with visual colour feedback by changing colour when pressed, and returning back to its original colour.
 
@@ -232,6 +232,7 @@ For the main file, we need to import more modules from which
 - Contains the code for the design layout for Hard mode.
 - 5 colored LEDs to represent North, South, East, West and Submit Sequence  buttons coded to send MIDI feedback to the Raspberry Pi.
 - Button feedback is also implemented for user experience.
+
 
 ### Main file
 
