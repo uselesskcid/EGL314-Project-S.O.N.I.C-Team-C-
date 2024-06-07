@@ -1,3 +1,4 @@
+
 <h1 align="center">
 Memory Sequence: Game Controller
 </h1>
@@ -29,13 +30,14 @@ We will be connecting our ***Launchpad*** to our ***Rasberry Pi 4*** with a ***U
 
 Several things to note before proceeding:
 
-- >  Ensure that your Raspberry Pi is updated. (e.g date and time, etc) 
+-  Ensure that your Raspberry Pi is updated. (e.g date and time, etc) 
 
-- > Make sure you are running a virtual environment (Create if you do not have one, refer to [here](https://github.com/huats-club/mts_sensor_cookbook/blob/main/0.%20virtual_environment/venv.md) for more details)
+-  Make sure you are running a virtual environment (Create if you do not have one, refer to [here](https://github.com/huats-club/mts_sensor_cookbook/blob/main/0.%20virtual_environment/venv.md) for more details)
 
-- >  Make sure that you have **python-osc** downloaded in your virtual environment.
+-  Make sure that you have **python-osc** downloaded in your virtual environment.
 
- >You should now be running your virtual environment on your Raspberry Pi terminal.
+> You should now be running your virtual environment on your Raspberry Pi terminal.
+
 
 Now, install the following module inside your virtual environment:
 
@@ -131,10 +133,10 @@ You are greeted with a single start buttton on the Launchpad.
  >The hard mode consists of four directions: North, South, East and West, with the playable buttons being inside the white circle.
 
 For each game mode, the layout represents the environment in which the player has to me
->- The environment has different groups of speakers representing different directions of sound.
->- The playable buttons surrounding the player's position
->- The white button on the center of the layout represents the player's position.
->- The colored LEDs that are outside the white space represent the speakres, according to which direction they are from.
+- The environment has different groups of speakers representing different directions of sound.
+- The playable buttons surrounding the player's position
+- The white button on the center of the layout represents the player's position.
+- The colored LEDs that are outside the white space represent the speakres, according to which direction they are from.
 
 
 
@@ -155,7 +157,7 @@ First we need to import the mido library.
 ```
 import mido
 ```
-> -  The "mido" library stores most of the functions that we will be coding for our game to function.
+ -  The "mido" library stores most of the functions that we will be coding for our game to function.
 
 Then, you will need create two variables and each variable opens the input and output port
 
@@ -168,8 +170,19 @@ inputport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 2
 ### Main file
 
 The code file that we will only be running on our Raspberry Pi terminal is our main file ([main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro............../main_file.py)) whch is the master file that sets up the whole game and  controls the running process of each individual game mode. 
-> - The start button is coded inside the main file to run whole game on the Launchpad.
-> - The two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load both the easy and hard mode ```python``` code files depending on which button the player presses.
+ - The start button is coded inside the main file to run whole game on the Launchpad.
+ - The two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load both the easy and hard mode ```python``` code files depending on which button the player presses.
+
+- The files for easy mode() and hard mode() consists of colouring code for the LEDs to implement their respective layout designs. 
+> - User button feedback is implemented
+
+
+ 
+
+In our ```Python``` codes, we assign colours to the LEDs on our Launchpad for the overall layout design including the functional buttons. 
+
+- For both easy and hard mode, we assigned colours for the buttons and 
+
 
 
 
