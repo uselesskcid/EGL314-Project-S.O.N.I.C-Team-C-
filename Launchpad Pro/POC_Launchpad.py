@@ -2,9 +2,15 @@ import mido
 import threading
 import subprocess
 import time
+import POC_FunctionStorage as fs
+import POC_UserInputLists as uil
+
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
 outport = mido.open_output(midipad)
 inport = mido.open_input(midipad)
+
+easylist = ['L','L','L','R','R','L','C']
+hardlist = ['L','L','L','R','R','L','C']
 
 def pixel(buttonid, colour):   #output command for sending colour
     """Function to light up 1 pixel."""
@@ -33,10 +39,13 @@ def start_easy_mode():     #output command for setting up gamemode
     if current_mode != 'easy':  # Only start if not already in easy mode
         terminate_current_process()
         print("Starting easy mode...")
-        current_process = subprocess.Popen(['python', 'easymode.py'])
+        current_process = subprocess.Popen(['python', 'reaper/POC_Catalogs/POC_LP_EasyMode.py'])
         current_mode = 'easy'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
+        fs.MA3_Seq94()
+        print('Easy mode sequence ON')
+
 
 def start_hard_mode():    #output command for setting up gamemode
     """Function to start hard mode."""
@@ -44,10 +53,13 @@ def start_hard_mode():    #output command for setting up gamemode
     if current_mode != 'hard':  # Only start if not already in hard mode
         terminate_current_process()
         print("Starting hard mode...")
-        current_process = subprocess.Popen(['python', 'hardmode2.py'])
+        current_process = subprocess.Popen(['python', 'reaper/POC_Catalogs/POC_LP_HardMode.py']) #Location of files. May vary.
         current_mode = 'hard'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
+        fs.MA3_Seq93()
+        print('Hard mode sequence ON')
+
 
 def clear_board():  #output command to clear lights of the whole board
     """Function to clear the LED board."""
@@ -59,8 +71,6 @@ def light_mode_buttons():   #output command to clear lights of the whole board
     pixel(17, 64)  
     pixel(18, 72)  
     
-
-
 def handle_midi_input():   #input feedback
     """Function to handle incoming MIDI messages."""
     global start_button_active, mode_buttons_active
@@ -70,6 +80,9 @@ def handle_midi_input():   #input feedback
                 start_button_active = False
                 mode_buttons_active = True
                 pixel(54, 0)  # Turn off the LED for button 54
+                print('Loading in progress. Please wait...')
+                fs.MA3_Seq91() # TRIGGERS Sequence 91.
+                time.sleep(10) #Wait for 10 seconds
                 start_easy_mode()  # Default to easy mode
                 light_mode_buttons()  # Light up mode buttons
             elif msg.note == 18 and mode_buttons_active:
@@ -82,6 +95,15 @@ def start_midi_listener():  #output command
     listener_thread = threading.Thread(target=handle_midi_input)
     listener_thread.daemon = True
     listener_thread.start()
+    
+def list_validation_easy():
+    if uil.userinputlist_easy == easylist:
+        print('You are win')
+
+def list_validation_hard():
+    if uil.userinputlist_hard == hardlist:
+        print('You are win')
+
 
 if __name__ == "__main__":
     # Light up button 54 as white to indicate it's the start button
@@ -93,3 +115,4 @@ if __name__ == "__main__":
     # Keep the main thread alive
     while True: #output command
         time.sleep(1)  # Prevent high CPU usage
+

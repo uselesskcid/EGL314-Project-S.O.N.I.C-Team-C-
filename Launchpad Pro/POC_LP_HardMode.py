@@ -1,4 +1,5 @@
 import mido
+import POC_UserInputLists as uil
 
 # Set up Launchpad MIDI ports for input and output
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
@@ -22,7 +23,8 @@ ogcolour = {
     53: 30,  # Colors for WEST
     51: 30,
     41: 30,
-    61: 30
+    61: 30,
+    54: 3    # Colors for middle
 }
 
 # Function to set the color of a specific button
@@ -46,7 +48,7 @@ def initialize_buttons():
     sfill(4)
     wfill(30)
     etfill(40)
-    box(3)
+    box(1)
 
 # Individual button functions to set their colors
 def buttonnorth(nbutton):
@@ -97,7 +99,9 @@ def pressnorth():
     print("NORTH")
     pixel(64, 3)  # Change color to indicate press
     for i in [83, 84, 85]:
-        pixel(i, 3)  
+        pixel(i, 3)
+    uil.userinputlist_hard.append('N')  # Append 'N' to the list
+    print('N appended')
 
 def releasenorth(): 
     pixel(64, ogcolour[64])  # Reset to original color on release
@@ -108,7 +112,9 @@ def presssouth():
     print("SOUTH")
     pixel(44, 3)  # Change color to indicate press
     for i in [23, 24, 25]:
-        pixel(i, 3) 
+        pixel(i, 3)
+    uil.userinputlist_hard.append('S')  # Append 'S' to the list
+    print('S appended')
 
 def releasesouth():  
     pixel(44, ogcolour[44])  # Reset to original color on release
@@ -119,7 +125,9 @@ def presswest():
     print("WEST")
     pixel(53, 3)  # Change color to indicate press
     for i in [51, 61, 41]:
-        pixel(i, 3) 
+        pixel(i, 3)
+    uil.userinputlist_hard.append('W')  # Append 'W' to the list
+    print('W appended')
 
 def releasewest(): 
     pixel(53, ogcolour[53])  # Reset to original color on release
@@ -130,7 +138,9 @@ def presseast():
     print("EAST")
     pixel(55, 3)  # Change color to indicate press
     for i in [57, 67, 47]:
-        pixel(i, 3)  
+        pixel(i, 3)
+    uil.userinputlist_hard.append('E')  # Append 'E' to the list
+    print('E appended')
 
 def releaseeast(): 
     pixel(55, ogcolour[55])  # Reset to original color on release
@@ -139,6 +149,13 @@ def releaseeast():
 
 def pressmiddle(): 
     print("PLAYER'S POSITION")
+    pixel(54, 90)  # Change color to indicate press
+    uil.userinputlist_hard.append('C')  # Append 'C' to the list
+    print('C appended')
+     
+def releasemiddle(): 
+    pixel(54, ogcolour[54])  # Reset to original color on release
+    
 
 # Event loop to handle button press/release inputs from the Launchpad
 for msg in inport:  # Input commands from Launchpad
@@ -163,6 +180,9 @@ for msg in inport:  # Input commands from Launchpad
                 presseast()  
             else:  # East button released
                 releaseeast()  
-        elif msg.note == 54 and msg.velocity != 0:  # Middle button pressed
-            pressmiddle()  
-
+        elif msg.note == 54:
+            if msg.velocity != 0:  # East button pressed
+                pressmiddle()  
+            else:  # East button released
+                releasemiddle()  
+        
