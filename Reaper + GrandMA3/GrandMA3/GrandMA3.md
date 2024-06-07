@@ -16,7 +16,7 @@ This markdown documentation file shows all the lighting sequences that have been
 
 ## Easy Level Lighting Sequence
 
-![Text](GrandMA3/assets/easymodelights.jpeg)
+![Text](Reaper + GrandMA3/GrandMA3/assets/easymodelights.jpeg)
 
 ## Hard Level Lighting Sequence
 
