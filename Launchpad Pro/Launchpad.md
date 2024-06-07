@@ -1,4 +1,5 @@
 
+
 <h1 align="center">
 Memory Sequence: Game Controller
 </h1>
@@ -159,14 +160,19 @@ import mido
 ```
  -  The "mido" library stores most of the functions that we will be coding for our game to function.
 
-Then, you will need create two variables and each variable opens the input and output port
+Then, you will need create two variables and each variable opens the input port and output port for recieving MIDI messages and sending MIDI commands respectively.
 
 ```
+
 # Example:
 
 outputport = mido.open_output('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
 inputport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
 ```
+>  - "outputport" and "inputport" are variables.
+>  - "mido.open_output" and "mido.open_input" are both functions from the mido library.
+> - Both the mido functions state the names for the input port and output ports of the Launchpad (Both are named ***'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'***) in order to open these ports for Launchpad and Raspberry Pi MIDI communication.
+
 ### Main file
 
 The code file that we will only be running on our Raspberry Pi terminal is our main file ([main_file.py](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Launchpad%20Pro............../main_file.py)) whch is the master file that sets up the whole game and  controls the running process of each individual game mode. 
@@ -182,7 +188,6 @@ The code file that we will only be running on our Raspberry Pi terminal is our m
 In our ```Python``` codes, we assign colours to the LEDs on our Launchpad for the overall layout design including the functional buttons. 
 
 - For both easy and hard mode, we assigned colours for the buttons and 
-
 
 
 
