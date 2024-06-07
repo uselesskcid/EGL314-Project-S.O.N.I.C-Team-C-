@@ -167,10 +167,10 @@ Then, you will need create two variables and each variable opens the input port 
 
 # Example:
 
-outputport = mido.open_output('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
-inputport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
+outport = mido.open_output('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
+inport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
 ```
->  - "outputport" and "inputport" are variables.
+>  - "outport" and "inport" are variables.
 >  - "mido.open_output" and "mido.open_input" are both functions from the mido library.
 > - Both the mido functions state the names for the input port and output ports of the Launchpad (Both are named ***'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'***) in order to open these ports for Launchpad and Raspberry Pi MIDI communication.
 
@@ -183,7 +183,7 @@ We need to start off by sending this output message to the Launchpad in order to
 
 # Example 
 def pixel(buttonid, colour):
-     outputport.send(mido.Message('note_on', note=buttonid, velocity=colour))
+     outport.send(mido.Message('note_on', note=buttonid, velocity=colour))
 ```
 > - The output port sends a MIDI message to the Launchpad.  'note_on' tells the LED to light up.
 > - For the Launchpad, 'note' is referred to as the button ID of an LED, and 'velocity' is referred to the colour of the LED to light up.
@@ -219,10 +219,6 @@ for msg in inport:
 ```
 
 
-These are the essential functions to start coding for the easy and hard mode files.
-
-For the main file, we need to import more modules from which 
-
 ### Easy mode file
 The layout for easy mode shows up when this file is loaded. Players can input the Left and Right directions with the buttons during the memory sequence.
 - The code contains the colours of the design layout for Easy mode on the Launchpad. 
@@ -243,6 +239,9 @@ The code file that we will only be running on our Raspberry Pi terminal is our *
  - The start button is coded inside the main file to start and load the whole game on the Launchpad.
  - The functions of the two difficulty mode buttons are coded in the main file to switch between easy and hard mode. This means that the main file can load the easy or hard mode depending on which difficulty mode button the player presses.
 - The difficulty mode buttons can be pressed when the easy or hard mode is on the Launchpad.
+- More modules are imported in this file such as time, subprocess and threading in order to create functions to run one difficulty mode at a time 
+
+
 
 
 
