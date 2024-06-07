@@ -1,4 +1,5 @@
 import mido
+import POC_UserInputLists as uil
 
 # Set up Launchpad MIDI ports for input and output
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
@@ -19,7 +20,8 @@ ogcolour = {
     41: 30,
     61: 30,
     72: 30,
-    32: 30
+    32: 30,
+    54: 3
 }
 
 # Function to set the color of a specific button
@@ -36,7 +38,7 @@ def initialize_buttons():
     middlebutton(3)
     lfill(30)
     rfill(40)
-    box(3)
+    box(1)
 
 # Individual button functions to set their colors
 
@@ -81,7 +83,9 @@ def pressleft():
     print("LEFT")
     pixel(53, 3)  # Change color to indicate press
     for i in [51, 61, 41, 72, 32]:
-        pixel(i, 3) 
+        pixel(i, 3)
+    uil.userinputlist_easy.append('L')  # Append 'L' to the list
+    print('L appended')
 
 def releaseleft(): 
     pixel(53, ogcolour[53])  # Reset to original color on release
@@ -92,7 +96,9 @@ def pressright():
     print("RIGHT")
     pixel(55, 3)  # Change color to indicate press
     for i in [57, 67, 47, 76, 36]:
-        pixel(i, 3)  
+        pixel(i, 3)
+    uil.userinputlist_easy.append('R')  # Append 'R' to the list
+    print('R appended')
 
 def releaseright(): 
     pixel(55, ogcolour[55])  # Reset to original color on release
@@ -101,6 +107,13 @@ def releaseright():
 
 def pressmiddle(): 
     print("PLAYER'S POSITION")
+    pixel(54, 90)  # Change color to indicate press
+    uil.userinputlist_easy.append('C')  # Append 'C' to the list
+    print('C appended')
+
+def releasemiddle(): 
+    pixel(54, ogcolour[54])  # Reset to original color on release
+    
 
 # Event loop to handle button press/release inputs from the Launchpad
 for msg in inport:  # Input commands from Launchpad
@@ -115,5 +128,9 @@ for msg in inport:  # Input commands from Launchpad
                 pressright()  
             else:  # Right button released
                 releaseright()  
-        elif msg.note == 54 and msg.velocity != 0:  # Middle button pressed
-            pressmiddle()  
+        elif msg.note == 54:
+            if msg.velocity != 0:  #Right button pressed
+                pressmiddle()  
+            else:  # Right button released
+                releasemiddle()  
+        
