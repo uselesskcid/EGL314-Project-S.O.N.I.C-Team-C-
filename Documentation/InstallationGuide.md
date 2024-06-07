@@ -30,3 +30,20 @@ Audio:
 - [L-ISA Controller](https://www.l-acoustics.com/products/l-isa-studio/) (Spatial object mixing software to create an immersive soundscape)
 - L-ISA Processor (Installed with L-ISA Controller)
 
+## Steps and instructions for Installation
+
+### Connectivity between grandMA3 and Raspberry Pi:
+
+1) After launching grandMA3, head over to Settings -> In & Out
+
+![](screenshots/GrandMA3_Step1.png)
+
+2) Head to OSC Tab
+
+3) Ensure IP address, port and prefix are set as needed.
+
+4) 'Enable Output', 'Enable Input', 'Receive', 'Recieve Command' and 'Echo Input' should all be enabled.
+
+![](screenshots/GrandMA3_Step4.png)
+
+## Configuration settings
