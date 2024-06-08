@@ -1,9 +1,9 @@
 ## System Diagram:
 ```mermaid
 graph TD
-A[Raspberry Pi 4 Master] <--LAN/WiFi + OSC --> B[Master Laptop]
 A <--MIDI<br>USB 3.0 to USB C--> K[Launchpad Pro MK3<br>Customized Touchpad] 
 A --display--> O[Laptop]
+A[Raspberry Pi 4 Master] <--LAN/WiFi + OSC --> B[Master Laptop]
 
 B <--Running OSC--> C[Reaper DAW]
 B <--Running OSC--> D[GrandMA3<br>Lighting Console]
