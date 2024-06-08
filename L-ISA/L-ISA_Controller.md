@@ -8,7 +8,7 @@ L-ISA Controller
 
 ## Related files
 
-[Controller Main File](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/MAINFILE_POC_FINAL-copy.lisa) - Please open this file with the L-ISA Controller software to view the soundscape layering and mixing for Team C.
+[Controller Main File](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/MAINFILE_POC_FINAL-copy.lisa) - Please download and open this file with the L-ISA Controller software to view the soundscape layering and mixing for Team C.
 
 ## Overview
 
