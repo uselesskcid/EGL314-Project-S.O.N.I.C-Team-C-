@@ -8,8 +8,8 @@ Reaper DAW Mixing
 
 ## Related files
 
-[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3\OSC\OSC.md) - This markdown file contains relevant information about the control of Reaper DAW markers through OSC commands from a Raspberry Pi 4. <br>
-[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3\Reaper_DAW\assets) - This folder contains all the relevant audio assets used as well as 2 pictures of the reaper audio tracks.<br>
+[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of Reaper DAW markers through OSC commands from a Raspberry Pi 4. <br>
+[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3/Reaper_DAW/assets) - This folder contains all the relevant audio assets used as well as 2 pictures of the reaper audio tracks.<br>
 [L-ISA Controller](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/L-ISA_Controller.md) - This markdown file contains all the details about the soundscape mixing and layering done.
 
 ## Overview
@@ -28,8 +28,8 @@ Out of all the audio assets, there are a few important ones to look out for. The
 
 ## Reaper DAW Audio Tracks & Markers
 
-![Audio Tracks & Markers 1](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3\Reaper_DAW\assets\reaper_1.png)
+![Audio Tracks & Markers 1](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3/Reaper_DAW/assets/reaper_1.png)
 
-![Audio Tracks & Markers 2](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3\Reaper_DAW\assets\reaper_2.png)
+![Audio Tracks & Markers 2](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3/Reaper_DAW/assets/reaper_2.png)
 
 As seen in the above pictures, there are 6 audio tracks, 1 for Hard Level, 1 for Easy Level, 1 for Suspence (Start), 1 for BGM (background music to be played when players are being briefed at the station), 1 for Win, 1  for Lose.
