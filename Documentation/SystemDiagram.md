@@ -11,8 +11,10 @@ B <--Running OSC--> D[GrandMA3<br>Lighting Console]
 C[Reaper<br>DAW] <--LAN Dante VSC --> F[L-ISA Processor]
 
 D <--LAN sACN--> E[Hanging Lights<br>Ayrton Mistral, Magicblade, Minipanel<br>Showline ePar]
-D <--universe 1--> M[Smoke Machine]
-M <--Wireless DMX--> N[DMX Fan]
+D <--universe 1 DMX--> M[Wireless DMX Tx]
+M <--wireless--> N[Wireless DMX Rx]
+N <--DMX--> P[G Force 2 Smoke Machine]
+P <--DMX--> Q[Generic DMX Fan]
 
 F <--Spatial MetaData--> G[L-ISA Controller]
 G <--LAN Dante--> H[Mixer<br>Yamaha QL1]
