@@ -8,7 +8,7 @@ L-ISA Processor
 
 ## Related files
 
-[Controller Main File](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/MAINFILE_POC_FINAL-copy.lisa) - Please open this file with the L-ISA Processor software to view the connections laid.
+[Processor Main File](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/MAINFILE_POC_FINAL-copy.lisa) - Please open this file with the L-ISA Processor software to view the connections laid.
 
 ## Overview
 
