@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C/commits/main/"><img src="https://img.shields.io/github/last-commit/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C/commits/main/"><img src="https://img.shields.io/github/last-commit/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC.svg?style=for-the-badge"/></a>
 </p>
 
 ## Overview
