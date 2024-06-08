@@ -16,24 +16,24 @@ This markdown documentation file shows all the lighting sequences that have been
 
 ## Easy Level Lighting Sequence
 
-![Easy Level Lighting](Reaper%26GrandMA3/GrandMA3/assets/easymodelights.jpeg)
+![Easy Level Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/easymodelights.jpeg)
 
 ## Hard Level Lighting Sequence
 
-![Hard Level Lighting](Reaper%26GrandMA3/GrandMA3/assets/hardmodelights.jpeg)
+![Hard Level Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/hardmodelights.jpeg)
 
 ## Station Lighting Sequence
 
-![Station Lighting](Reaper%26GrandMA3/GrandMA3/assets/stationlights.jpeg)
+![Station Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/stationlights.jpeg)
 
 ## Center Lighting Sequence
 
-![Center Lighting](Reaper%26GrandMA3/GrandMA3/assets/gameseq.gif)
+![Center Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/gameseq.gif)
 
 ## Lose Lighting Sequence
 
-![Lose Lighting](Reaper%26GrandMA3/GrandMA3/assets/smokefanmachine.gif)
+![Lose Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/smokefanmachine.gif)
 
 ## Start Lighting Sequence
 
-![Start Lighting](Reaper%26GrandMA3/GrandMA3/assets/suspenseseq.gif.jpeg)
+![Start Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-
