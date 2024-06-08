@@ -8,7 +8,7 @@ GrandMA3 Sequence Programming
 
 ## Related files
 
-[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of GrandMA3 sequences through OSC commands from a Raspberry Pi 4.
+[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper&GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of GrandMA3 sequences through OSC commands from a Raspberry Pi 4.
 
 ## Overview
 
