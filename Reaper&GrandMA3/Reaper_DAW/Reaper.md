@@ -9,8 +9,8 @@ Reaper DAW Mixing
 ## Related files
 
 [OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of Reaper DAW markers through OSC commands from a Raspberry Pi 4. <br>
-[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/Reaper_DAW/assets)<br>
-[L-ISA Controller](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/L-SA_Controller.md)
+[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/Reaper_DAW/assets) - This folder contains all the relevant audio assets used as well as 2 pictures of the reaper audio tracks.<br>
+[L-ISA Controller](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/L-SA_Controller.md) - This markdown file contains all the details about the soundscape mixing and layering done.
 
 ## Overview
 
