@@ -8,8 +8,8 @@ Reaper DAW Mixing
 
 ## Related files
 
-[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of Reaper DAW markers through OSC commands from a Raspberry Pi 4.
-[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/Reaper_DAW/assets)
+[OSC.md](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/OSC/OSC.md) - This markdown file contains relevant information about the control of Reaper DAW markers through OSC commands from a Raspberry Pi 4. <br>
+[Audio assets](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%20%2B%20GrandMA3/Reaper_DAW/assets)<br>
 [L-ISA Controller](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/L-ISA/L-SA_Controller.md)
 
 ## Overview
@@ -25,3 +25,11 @@ Out of all the audio assets, there are a few important ones to look out for. The
 2. WIN sound effect - this the sound effect used as an audio cue to inform players that they have won the game
 3. lose sound effect - this is the sound effect used an audio cue to inform players that they have lost the game
 4. others - the remaining sound effects are used to layer and mix in L-ISA controller for a background soundscape
+
+## Reaper DAW Audio Tracks & Markers
+
+![Audio Tracks & Markers 1](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/eaper_DAW/assets/reaper_1.png)
+
+![Audio Tracks & Markers 2](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/Reaper_DAW/assets/reaper_2.png)
+
+As seen in the above pictures, there are 6 audio tracks, 1 for Hard Level, 1 for Easy Level, 1 for Suspence (Start), 1 for BGM (background music to be played when players are being briefed at the station), 1 for Win, 1  for Lose.
