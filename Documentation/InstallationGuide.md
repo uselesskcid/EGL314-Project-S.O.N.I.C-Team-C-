@@ -15,7 +15,7 @@ Its fifth station, titled Memory Sequence, is a test involving the memory of hea
 
 A Master station shall be used, where every station shares the same master laptop, lighting console, the lighting fixtures, the digital audio mixer, and the 12 speaker outputs.
 
-Credits to [Huats Club](https://github.com/huats-club) for code used in our project.
+Credits to [Huats Club](https://github.com/huats-club) for the reference of installing Rasp Pi venv and sample Python files.
 
 ## Requirements for pre-installation
 
@@ -58,7 +58,13 @@ From Raspberry Pi, it's not possible to control grandMA3 or Reaper with default 
 
 Head over [here](https://github.com/huats-club/oscstarterkit/tree/main/tutorial5) to download the sample Python file to your virtual environment in Raspberry Pi.
 
-In the file, remember to change `PI_A_ADDR` to your laptop IP, and the port you set on grandMA3 earlier.
+```
+if __name__ == "__main__":
+    LAPTOP_IP = "192.168.0.100"		# send to laptop w grandMA3
+    PORT = 8000                     # laptop w grandMA3 port number
+```
+
+In the file, remember to change `LAPTOP_IP` to your laptop IP, and ```PORT``` you set on grandMA3 earlier.
 
 ### Connectivity between Reaper and Raspberry Pi:
 
@@ -83,6 +89,12 @@ In the file, remember to change `PI_A_ADDR` to your laptop IP, and the port you 
 
 #### Raspberry Pi
 
-Head over [here](https://github.com/huats-club/oscstarterkit/tree/main/tutorial8) to download the two sample python files to your virtual environment in Raspberry Pi.
+Head over [here](https://github.com/huats-club/oscstarterkit/tree/main/tutorial8) to download the two sample Python files to your virtual environment in Raspberry Pi.
 
-In the files, remember to change `PI_A_ADDR` to your laptop IP, and the port to the local listen port/receive port number.
+```
+PI_A_ADDR = "10.10.10.10"		# wlan ip
+PORT = 6800
+```
+
+In the files, remember to change `PI_A_ADDR` to your laptop IP, and ```PORT``` to the local listen port/receive port number.
+
