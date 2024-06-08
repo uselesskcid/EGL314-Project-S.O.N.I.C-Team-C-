@@ -24,11 +24,15 @@ This markdown documentation file shows all the lighting sequences that have been
 
 ## Station Lighting Sequence
 
-![Station Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/stationlights.jpeg)
+![Station Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/presentationseq.gif)
 
 ## Center Lighting Sequence
 
 ![Center Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/gameseq.gif)
+
+## Win Lighting Sequence
+
+![Lose Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/win.gif)
 
 ## Lose Lighting Sequence
 
@@ -36,4 +40,5 @@ This markdown documentation file shows all the lighting sequences that have been
 
 ## Start Lighting Sequence
 
-![Start Lighting](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-
+![Start Lighting]([https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Reaper%26GrandMA3/GrandMA3/assets/suspenseseq.gif)
+)
