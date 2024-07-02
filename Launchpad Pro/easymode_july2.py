@@ -99,7 +99,7 @@ def block_inputs():
     blockedbuttons = [53, 54, 55]
     
     for button in blockedbuttons:
-        pixel(54, 0)
+       
         pixel(11, 0)
         
     time.sleep(30)
