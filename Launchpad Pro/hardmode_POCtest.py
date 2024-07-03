@@ -1,6 +1,7 @@
 import mido
 import time
 
+
 # Set up Launchpad MIDI ports for input and output
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
 outport = mido.open_output(midipad)  # Output port for sending commands to Launchpad
@@ -151,14 +152,11 @@ def releaseeast():
   
 
 
-        
-     
-
 
 def block_inputs():
     global input_block
     input_block = True
-    blockedbuttons = [53, 54, 55, 64, 44]
+    blockedbuttons = [53, 55, 64, 44]
     
     for button in blockedbuttons:
        
@@ -168,7 +166,6 @@ def block_inputs():
     
     for button in blockedbuttons:
         pixel(53, ogcolour[53])
-        pixel(54, ogcolour[54])
         pixel(55, ogcolour[55])
         pixel(44, ogcolour[44])
         pixel(64, ogcolour[64])
@@ -176,6 +173,7 @@ def block_inputs():
         
         
     input_block = False
+    
 
 
     
@@ -203,8 +201,8 @@ for msg in inport:  # Input commands from Launchpad
                 presseast()  
             else:  # East button released
                 releaseeast()  
-        
+     
+              
         elif msg.note == 12:
             if not input_block:
                 threading.Thread(target=block_inputs).start()
-        

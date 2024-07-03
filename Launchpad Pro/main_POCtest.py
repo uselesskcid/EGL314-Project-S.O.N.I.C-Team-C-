@@ -2,6 +2,7 @@ import mido
 import threading
 import subprocess
 import time
+import POC_FunctionStorage_2 as fs
 
 # Set up Launchpad MIDI ports for input and output
 midipad = 'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'
@@ -38,7 +39,7 @@ def start_easy_mode():
     if current_mode != 'easy':  # Only start if not already in easy mode
         terminate_current_process()
         print("Starting easy mode...")
-        current_process = subprocess.Popen(['python', 'easymode_july2.py'])
+        current_process = subprocess.Popen(['python', 'POC_Test_Files/easymode_POCtest.py']) #File directory
         current_mode = 'easy'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
@@ -49,7 +50,7 @@ def start_hard_mode():
     if current_mode != 'hard':  # Only start if not already in hard mode
         terminate_current_process()
         print("Starting hard mode...")
-        current_process = subprocess.Popen(['python', 'hardmode_july2.py'])
+        current_process = subprocess.Popen(['python', 'POC_Test_Files/hardmode_POCtest.py'])
         current_mode = 'hard'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
@@ -64,6 +65,7 @@ def light_mode_buttons(on=True):
     if on:
         pixel(17, 64)
         pixel(18, 72)
+        
     else:
         pixel(17, 0)  # Button for easy mode
         pixel(18, 0)  # Button for hard mode
@@ -72,14 +74,10 @@ def block_modebuttons():
     global input_block
     input_block = True
     light_mode_buttons(False)
-    time.sleep(30)
+    time.sleep(1)
     input_block = False
-    light_mode_buttons(True)
-    
-    
-    
-    
-    
+    if not input_block:  # Ensure input_block is still False before lighting buttons
+        light_mode_buttons(True)
     
 def handle_midi_input():
     """Function to handle incoming MIDI messages."""
@@ -91,21 +89,22 @@ def handle_midi_input():
                 start_button_active = False
                 mode_buttons_active = True
                 pixel(54, 0)  # Turn off the LED for button 54
-                time.sleep(10)  #
+                fs.SEQ_OrangeBtn()                
                 start_easy_mode()  # Default to easy mode
                 light_mode_buttons()  # Light up mode buttons
             
             elif msg.note == 18 and mode_buttons_active and not input_block:
+                fs.MA3_Seq93()
                 start_hard_mode()
             elif msg.note == 17 and mode_buttons_active and not input_block:
+                fs.MA3_Seq94()
                 start_easy_mode()
-            
             elif msg.note == 11 and current_mode == 'easy' and not input_block:
+                fs.SEQ_Easy()
                 threading.Thread(target=block_modebuttons).start()
-                
             elif msg.note == 12 and current_mode == 'hard' and not input_block:
+                fs.SEQ_Hard()
                 threading.Thread(target=block_modebuttons).start()
-             
 
 def start_midi_listener():
     """Function to run the MIDI input handler in a separate thread."""

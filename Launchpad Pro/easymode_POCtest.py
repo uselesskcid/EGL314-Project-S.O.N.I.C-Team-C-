@@ -87,29 +87,20 @@ def releaseright():
     global input_block
     if not input_block:
         pixel(55, ogcolour[55]) 
-
-
-        
-
-
     
 def block_inputs():
     global input_block
     input_block = True
-    blockedbuttons = [53, 54, 55]
+    blockedbuttons = [53, 55]
     
     for button in blockedbuttons:
-       
         pixel(11, 0)
-        
     time.sleep(30)
     
     for button in blockedbuttons:
         pixel(53, ogcolour[53])
-        pixel(54, ogcolour[54])
         pixel(55, ogcolour[55])
         pixel(11, ogcolour[11])
-        
     input_block = False
 
 
@@ -125,14 +116,6 @@ for msg in inport:
                 pressright()
             else:
                 releaseright()
-       
         elif msg.note == 11:
             if not input_block:
                 threading.Thread(target=block_inputs).start()
-                    
-
-            
-
-                
-
-        
