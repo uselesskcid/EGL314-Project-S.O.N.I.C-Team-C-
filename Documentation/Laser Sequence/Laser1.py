@@ -7,20 +7,9 @@ import Laser_DAW as DAW
 PI_A_ADDR = "192.168.254.49"  # Change to your RPi's IP address
 PORT = 2000
 
-# Function to send color to NeoPixel
-def send_color(receiver_ip, receiver_port, r, g, b):
-    client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
-    client.send_message("/color", [r, g, b])
-
-# Function to send brightness to NeoPixel
-def send_brightness(receiver_ip, receiver_port, brightness):
-    client = udp_client.SimpleUDPClient(receiver_ip, receiver_port)
-    client.send_message("/brightness", [brightness])
-
 # Function to send UDP message
 def send_message(receiver_ip, receiver_port, address, message):
     """Send a UDP message to the specified IP address and port."""
-    # Simulating UDP message sending (replace with actual implementation)
     print(f"Message '{message}' sent to {address}.")
 
 # Reaper DAW stop
@@ -66,114 +55,44 @@ def turn_on_all():
     for msg in messages:
         send_message(PI_A_ADDR, PORT, "/print", msg)
 
-# Activate left side lasers
-def left_on():
-    messages = [
-        f"7, 1, 1", f"7, 2, 1",
-        f"8, 1, 1", f"8, 2, 1",
-        f"9, 1, 1", f"9, 2, 1",
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
+# Toggle lasers 1 to 6 on/off
+def toggle_laser(laser_id, state):
+    send_message(PI_A_ADDR, PORT, "/print", f"{laser_id}, 1, {state}")
+    send_message(PI_A_ADDR, PORT, "/print", f"{laser_id}, 2, {state}")
 
-# Activate right side lasers
-def right_on():
-    messages = [
-        f"1, 1, 1", f"1, 2, 1",
-        f"2, 1, 1", f"2, 2, 1",
-        f"3, 1, 1", f"3, 2, 1",
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
+def laser_1_on(): toggle_laser(1, 1)
+def laser_1_off(): toggle_laser(1, 0)
+def laser_2_on(): toggle_laser(2, 1)
+def laser_2_off(): toggle_laser(2, 0)
+def laser_3_on(): toggle_laser(3, 1)
+def laser_3_off(): toggle_laser(3, 0)
+def laser_4_on(): toggle_laser(4, 1)
+def laser_4_off(): toggle_laser(4, 0)
+def laser_5_on(): toggle_laser(5, 1)
+def laser_5_off(): toggle_laser(5, 0)
+def laser_6_on(): toggle_laser(6, 1)
+def laser_6_off(): toggle_laser(6, 0)
 
-# Activate front side lasers
-def front_on():
-    messages = [
-        f"10, 1, 1", f"10, 2, 1",
-        f"11, 1, 1", f"11, 2, 1",
-        f"12, 1, 1", f"12, 2, 1",
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Activate back side lasers
-def back_on():
-    messages = [
-        f"4, 1, 1", f"4, 2, 1",
-        f"5, 1, 1", f"5, 2, 1",
-        f"6, 1, 1", f"6, 2, 1",
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Activate ribbon shape
-def ribbon_shape_on():
-    messages = [
-        f"1, 1, 1", f"1, 2, 1",
-        f"2, 1, 1", f"2, 2, 1",
-        f"3, 1, 1", f"3, 2, 1",
-        f"7, 1, 1", f"7, 2, 1",
-        f"8, 1, 1", f"8, 2, 1",
-        f"9, 1, 1", f"9, 2, 1"
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Activate plus shape
-def plus_shape_on():
-    messages = [
-        f"11, 1, 1", f"11, 2, 1",
-        f"2, 1, 1", f"2, 2, 1",
-        f"5, 1, 1", f"5, 2, 1",
-        f"8, 1, 1", f"8, 2, 1"
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Activate chase 1x1 shape
-def chase1x1_on():
-    messages = [
-        f"1, 1, 1", f"1, 2, 1",
-        f"2, 1, 1", f"2, 2, 1",
-        f"3, 1, 1", f"3, 2, 1",
-        f"4, 1, 1", f"4, 2, 1",
-        f"5, 1, 1", f"5, 2, 1",
-        f"6, 1, 1", f"6, 2, 1",
-        f"7, 1, 1", f"7, 2, 1",
-        f"8, 1, 1", f"8, 2, 1",
-        f"9, 1, 1", f"9, 2, 1",
-        f"10, 1, 1", f"10, 2, 1",
-        f"11, 1, 1", f"11, 2, 1",
-        f"12, 1, 1", f"12, 2, 1"
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Activate star shape
-def star_shape_on():
-    messages = [
-        f"11, 1, 1", f"11, 2, 1",
-        f"2, 1, 1", f"2, 2, 1",
-        f"4, 1, 1", f"4, 2, 1",
-        f"6, 1, 1", f"6, 2, 1",
-        f"8, 1, 1", f"8, 2, 1"
-    ]
-    for msg in messages:
-        send_message(PI_A_ADDR, PORT, "/print", msg)
-
-# Function to run the laser show sequence for 30 seconds
+# Function to run the laser show sequence for 30 seconds with beat variable
 def run_laser_show():
+    beat = 1  # Initialize beat counter
     DAW.REA_JumpLaserMarker()
     start_time = time.time()
     while time.time() - start_time < 30:
-        front_on()
+        print(f"Beat: {beat}")  # Print the current beat for debugging
+        send_message(PI_A_ADDR, PORT, "/print", "1, 1, 1")
         time.sleep(1)
-        back_on()
+        send_message(PI_A_ADDR, PORT, "/print", "1, 1, 0")
         time.sleep(1)
-        left_on()
+        send_message(PI_A_ADDR, PORT, "/print", "2, 1, 1")
         time.sleep(1)
-        right_on()
+        send_message(PI_A_ADDR, PORT, "/print", "2, 1, 0")
         time.sleep(1)
+        send_message(PI_A_ADDR, PORT, "/print", "3, 1, 1")
+        time.sleep(1)
+        send_message(PI_A_ADDR, PORT, "/print", "3, 1, 0")
+        time.sleep(1)
+        beat += 1  # Increment the beat counter
         turn_off_all()
         time.sleep(1)
 
@@ -181,33 +100,49 @@ def run_laser_show():
 root = tk.Tk()
 root.title("Laser Control")
 
-# Define buttons for each laser control action
-btn_all_on = tk.Button(root, text="All On", command=turn_on_all)
-btn_all_off = tk.Button(root, text="All Off", command=turn_off_all)
-btn_left_on = tk.Button(root, text="Left On", command=left_on)
-btn_right_on = tk.Button(root, text="Right On", command=right_on)
-btn_front_on = tk.Button(root, text="Front On", command=front_on)
-btn_back_on = tk.Button(root, text="Back On", command=back_on)
-btn_ribbon_shape = tk.Button(root, text="Ribbon Shape", command=ribbon_shape_on)
-btn_plus_shape = tk.Button(root, text="Plus Shape", command(plus_shape_on)
-btn_chase1x1 = tk.Button(root, text="Chase 1x1", command=chase1x1_on)
-btn_star_shape = tk.Button(root, text="Star Shape", command=star_shape_on)
-btn_stop = tk.Button(root, text="Stop", command=stop)
-btn_run_laser_show = tk.Button(root, text="Run Laser Show", command=run_laser_show)
+# Improved Layout with a grid
+frame = tk.Frame(root)
+frame.pack(padx=10, pady=10)
 
-# Place buttons in the GUI window
-btn_all_on.pack()
-btn_all_off.pack()
-btn_left_on.pack()
-btn_right_on.pack()
-btn_front_on.pack()
-btn_back_on.pack()
-btn_ribbon_shape.pack()
-btn_plus_shape.pack()
-btn_chase1x1.pack()
-btn_star_shape.pack()
-btn_stop.pack()
-btn_run_laser_show.pack()
+# Define buttons for each laser control action
+btn_all_on = tk.Button(frame, text="All On", command=turn_on_all)
+btn_all_off = tk.Button(frame, text="All Off", command=turn_off_all)
+
+btn_laser_1_on = tk.Button(frame, text="Laser 1 On", command=laser_1_on)
+btn_laser_1_off = tk.Button(frame, text="Laser 1 Off", command=laser_1_off)
+btn_laser_2_on = tk.Button(frame, text="Laser 2 On", command=laser_2_on)
+btn_laser_2_off = tk.Button(frame, text="Laser 2 Off", command=laser_2_off)
+btn_laser_3_on = tk.Button(frame, text="Laser 3 On", command=laser_3_on)
+btn_laser_3_off = tk.Button(frame, text="Laser 3 Off", command=laser_3_off)
+btn_laser_4_on = tk.Button(frame, text="Laser 4 On", command=laser_4_on)
+btn_laser_4_off = tk.Button(frame, text="Laser 4 Off", command=laser_4_off)
+btn_laser_5_on = tk.Button(frame, text="Laser 5 On", command=laser_5_on)
+btn_laser_5_off = tk.Button(frame, text="Laser 5 Off", command=laser_5_off)
+btn_laser_6_on = tk.Button(frame, text="Laser 6 On", command=laser_6_on)
+btn_laser_6_off = tk.Button(frame, text="Laser 6 Off", command=laser_6_off)
+
+btn_stop = tk.Button(frame, text="Stop", command=stop)
+btn_run_laser_show = tk.Button(frame, text="Start Laser Sequence", command=run_laser_show)
+
+# Place buttons in the GUI window using grid layout
+btn_all_on.grid(row=0, column=0, padx=5, pady=5)
+btn_all_off.grid(row=0, column=1, padx=5, pady=5)
+
+btn_laser_1_on.grid(row=1, column=0, padx=5, pady=5)
+btn_laser_1_off.grid(row=1, column=1, padx=5, pady=5)
+btn_laser_2_on.grid(row=2, column=0, padx=5, pady=5)
+btn_laser_2_off.grid(row=2, column=1, padx=5, pady=5)
+btn_laser_3_on.grid(row=3, column=0, padx=5, pady=5)
+btn_laser_3_off.grid(row=3, column=1, padx=5, pady=5)
+btn_laser_4_on.grid(row=4, column=0, padx=5, pady=5)
+btn_laser_4_off.grid(row=4, column=1, padx=5, pady=5)
+btn_laser_5_on.grid(row=5, column=0, padx=5, pady=5)
+btn_laser_5_off.grid(row=5, column=1, padx=5, pady=5)
+btn_laser_6_on.grid(row=6, column=0, padx=5, pady=5)
+btn_laser_6_off.grid(row=6, column=1, padx=5, pady=5)
+
+btn_stop.grid(row=7, column=0, padx=5, pady=5)
+btn_run_laser_show.grid(row=7, column=1, padx=5, pady=5)
 
 # Start the GUI event loop
 root.mainloop()

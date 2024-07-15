@@ -129,12 +129,20 @@ def plus_shape_ON():
         send_message(PI_A_ADDR, PORT, "/print", msg)
 
 # Activate X shape ON
-def x_shape_ON():
+def chase1x1_ON():
     messages = [
-        f"12, 1, 1", f"12, 2, 1",
-        f"3, 1, 1", f"3, 2, 1",
-        f"7, 1, 1", f"7, 2, 1",
-        f"10, 1, 1", f"10, 2, 1"
+        f"1,1,1", f"1,2,1",
+        f"2,1,1", f"2,2,1",
+        f"3,1,1", f"3,2,1",
+        f"4,1,1", f"4,2,1",
+        f"5,1,1", f"5,2,1",
+        f"6,1,1", f"6,2,1",
+        f"7,1,1", f"7,2,1",
+        f"8,1,1", f"8,2,1",
+        f"9,1,1", f"9,2,1",
+        f"10,1,1", f"10,2,1",
+        f"11,1,1", f"11,2,1",
+        f"12,1,1", f"12,2,1"
     ]
     for msg in messages:
         send_message(PI_A_ADDR, PORT, "/print", msg)
@@ -156,7 +164,7 @@ def run_laser_show():
     DAW.REA_JumpLaserMarker()
     start_time = time.time()
     while time.time() - start_time < 30:
-        # Chase
+        # Chase 3x3
         front_ON
         time.sleep(1)
         turn_off_all
@@ -184,8 +192,8 @@ def run_laser_show():
         time.sleep(1)
         turn_off_all
 
-        # X shape
-        x_shape_ON()
+        # Chase 1x1 shape
+        chase1x1_ON()
         time.sleep(1)
         turn_off_all
 

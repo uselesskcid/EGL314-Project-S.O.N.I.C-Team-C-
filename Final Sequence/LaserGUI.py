@@ -1,49 +1,60 @@
 import tkinter as tk
+from tkinter import messagebox
 import RPi.GPIO as GPIO
 
+# Define GPIO pins
+pins = {
+    'Laser 1': 21,
+    'Laser 2': 20,
+    'Laser 3': 26,
+    'Laser 4': 19,
+    'Laser 5': 3,
+    'Laser 6': 2
+}
+
+# Setup GPIO
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(3,GPIO.OUT)
-GPIO.setup(2,GPIO.OUT)
+for pin in pins.values():
+    GPIO.setup(pin, GPIO.OUT)
+    GPIO.output(pin, GPIO.LOW)
 
-GPIO.setup(20,GPIO.OUT)
-GPIO.setup(21,GPIO.OUT)
+# Toggle function
+def toggle_laser(laser):
+    pin = pins[laser]
+    GPIO.output(pin, not GPIO.input(pin))
 
-GPIO.setup(19,GPIO.OUT)
-GPIO.setup(26,GPIO.OUT)
-            
-def laseron():
-    GPIO.output(3,GPIO.LOW)
-    GPIO.output(2,GPIO.LOW)
-    
-    GPIO.output(20,GPIO.LOW)
-    GPIO.output(21,GPIO.LOW)
-    
-    GPIO.output(19,GPIO.LOW)
-    GPIO.output(26,GPIO.LOW)
-    
-    
-    
-        
-def laseroff():
-    GPIO.output(3,GPIO.HIGH)
-    GPIO.output(2,GPIO.HIGH)
-    
-    GPIO.output(20,GPIO.HIGH)
-    GPIO.output(21,GPIO.HIGH)
-    
-    GPIO.output(19,GPIO.HIGH)
-    GPIO.output(26,GPIO.HIGH)
+# Turn all lasers on
+def all_on():
+    for pin in pins.values():
+        GPIO.output(pin, GPIO.LOW)
 
-main = tk.Tk()
-main.title("Laser Control")
+# Turn all lasers off
+def all_off():
+    for pin in pins.values():
+        GPIO.output(pin, GPIO.HIGH)
 
-laseron_label = tk.Label(main, text = "Laser", foreground = "purple", font=("Helvetica",20))
-laseron_button = tk.Button(main, text = "Laser On",command = laseron, background = "green", foreground = "white", font= ("Helvetica", 20))
-laserdown_button = tk.Button(main, text = "Laser Off", command = laseroff, background = "red",foreground = "white", font=("Helvetica",20))
+# Create GUI
+root = tk.Tk()
+root.title("Laser Control")
 
-laseron_label.grid(row = 0, column = 2)
-laseron_button.grid(row = 1, column = 1)
-laserdown_button.grid(row = 1, column = 3)
+# Laser buttons
+for laser in pins.keys():
+    button = tk.Button(root, text=laser, command=lambda l=laser: toggle_laser(l))
+    button.pack(pady=5)
 
-main.mainloop()
+# All on/off buttons
+all_on_button = tk.Button(root, text="All On", command=all_on)
+all_on_button.pack(pady=5)
 
+all_off_button = tk.Button(root, text="All Off", command=all_off)
+all_off_button.pack(pady=5)
+
+# Cleanup GPIO on exit
+def on_closing():
+    GPIO.cleanup()
+    root.destroy()
+
+root.protocol("WM_DELETE_WINDOW", on_closing)
+
+# Start GUI loop
+root.mainloop()
