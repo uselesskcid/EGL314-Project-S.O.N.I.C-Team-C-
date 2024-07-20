@@ -37,7 +37,7 @@ H <--LAN Dante--> I[Amplifier<br>Yamaha XMV8140D]
 I --Speaker Cable to Euroblock (4P)--> J[12 Speakers<br>Yamaha VXS5]
 
 J[Laptop GUI] <--LAN/WiFi + OSC--> K[Raspberry Pi - Laser Master]
-K -WiFi---> L[Raspberry Pi - Laser Slave 1]
+K --WiFi---> L[Raspberry Pi - Laser Slave 1]
 K --WiFi--> M[Raspberry Pi - Laser Slave 2]
 K --WiFi--> N[Raspberry Pi - Laser Slave 3]
 K --WiFi--> O[Raspberry Pi - Laser Slave 4]
