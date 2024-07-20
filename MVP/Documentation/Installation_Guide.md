@@ -11,7 +11,7 @@
 
 - [Overview](#overview) 📃
 - [Raspberry Pi Configuration](#rasp-pi) ⚙️
-- [grandMA3 Configuration](#grandMA3) 💡
+- [grandMA3 Configuration](#grandma3) 💡
 - [Reaper Configuration](#reaper) 🎛️
 - [Launchpad Configuration](#launchpad) 📱
 - [References](#references) 📋
@@ -85,7 +85,7 @@ source <environment_folder>/bin/activate
 ```
 pip3 install -r ~/<directory>/requirements.txt
 ```
-## <a id="grandMA3">grandMA3 Configuration 💡</a>
+## <a id="grandma3"> grandMA3 Configuration 💡</a>
 
 1) After launching grandMA3, head over to `Settings` > `In & Out`
 
@@ -151,6 +151,7 @@ mkdir <directory_name>
 
 ```
 PI_A_ADDR = "10.10.10.10"
+PORT = 6800
 ```
 
 4) Run both files.
