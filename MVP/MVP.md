@@ -1,22 +1,27 @@
-<<h1 align="center">
+<h1 align="center">
   Minimum Viable Product
 </h1>
 
 <p align="center">
-  <i align="center">
-  a test of auditory Memory Sequence
-  delivered by Team C
+  <i align="center">A rundown of our station, delivered on Minimum Viable Product (MVP)
   </i>
 </p>
 
-## Overview
+### Table Of Contents 📚
+
+- [Overview](#overview) 📃
+- [Hardware & Software Setup](#setup) ⚙️
+- [Getting Started!](#getting-started) 🔛
+- [Code Files](#code-files)
+
+## <a id="overview"> Overview 📃</a>
 This repository folder contains all the notable assets, codes and others used for our Minimum Viable Product (MVP) in Week 14 that covers Station 5 - Memory Sequence.
 
 In the Minimum Viable Product, we will be using a Master Station that is shared with the other teams. The Master Station hosts 3 different open-source softwares and they are Reaper DAW, L-ISA Controller and GrandMA3. There are 12 speakers in a 10 by 10 meters room and the participant will be standing in the center of the room to play their game.
 
 For the Minimum Viable Product, the demonstration will feature a full run through of the game. This includes a introduction, 2 difficulty levels, followed by a win/lose sequence. There are 2 Graphical User Interface (GUI) used, one for the game and another for a laser sequence show displayed.
 
-## Hardware & Software Setup
+## <a id="setup"> Hardware & Software Setup ⚙️</a>
 ```mermaid
 graph TD
 A <--MIDI<br>USB 3.0 to USB C--> K[Launchpad Pro MK3<br>Customized Touchpad] 
@@ -53,8 +58,21 @@ V --Relay Module--> Y
 W --Relay Module--> Y
 X --Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)--> Z[Neo Pixel LED Strip]
 ```
+## <a id="getting-started"> Getting Started 🔛</a>
+### Installation Guide
 
-## Code Files
+Your first stop! [Take a gander](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Documentation/Installation_Guide.md) as to how we installed everything, as well as how you can do it too.
+
+### Software & Hardware Overview
+
+Our software is operated by PythonOSC. [See how](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/OSC/OSC.md) everything is powered.
+
+The Launchpad is one device that makes us stand out. [See how](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Launchpad_(Ninja_Pulse)/Launchpad.md) we made use of it.
+
+### Slides
+Many groups use a poster. We went for [a slightly different approach](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/MVP_Poster.pptx).
+
+## <a id="code-files"> Code Files</a>
 In this folder, there are multiple folders with files such as the python code files used as well as the master station software files.
 They are seperated by their purposes.
 Below, there are more detailed explanations of the codes in their respective uses.
