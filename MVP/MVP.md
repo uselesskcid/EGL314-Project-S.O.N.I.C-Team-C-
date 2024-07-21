@@ -61,30 +61,30 @@ Below, there are more detailed explanations of the codes in their respective use
 
 <details><summary><h2>Documentation</h2></summary>
 
-In the [Documentation](.MVP/Documentation) folder, you can find the [Installation Guide](.MVP/Documentation/Installation_Guide.md) and the [Installation Assets](.MVP/Documentation/installation_assets).
+In the [Documentation](./Documentation) folder, you can find the [Installation Guide](./Documentation/Installation_Guide.md) and the [Installation Assets](./Documentation/installation_assets).
 
 </details>
 
 <details><summary><h2>GrandMA3</h2></summary>
 
-In the [GrandMA3](.MVP/GrandMA3) folder, you can find the [GrandMA3 Rundown](.MVP/GrandMA3/GrandMA3.md) and the [GrandMA3 Master Show file ](.MVP/GrandMA3/MasterShowfile_EGL314_MVP_FINAL.show).
+In the [GrandMA3](./GrandMA3) folder, you can find the [GrandMA3 Rundown](./GrandMA3/GrandMA3.md) and the [GrandMA3 Master Show file ](./GrandMA3/MasterShowfile_EGL314_MVP_FINAL.show).
 
 </details>
 
 <details><summary><h2>L-ISA Controller</h2></summary>
 
-In the [L-ISA Controller](.MVP/L-ISA_Controller) folder, you can find the [L-ISA Rundown](.MVP/L-ISA_Controller/L-ISA.md) and the [L-ISA Controller Master Show File](.MVP/L-ISA_Controller/MAINFILE_POC_FINAL_-_copy.lisa).
+In the [L-ISA Controller](./L-ISA_Controller) folder, you can find the [L-ISA Rundown](./L-ISA_Controller/L-ISA.md) and the [L-ISA Controller Master Show File](./L-ISA_Controller/MAINFILE_POC_FINAL_-_copy.lisa).
 
 </details>
 
 <details><summary><h2>Laser Sequence</h2></summary>
 
-In the [Laser Sequence](.MVP/Laser_Sequence) folder, you can find the [Laser Rundown](.MVP/Laser_Sequence/Laser.md), the [Full Laser Sequence python file](.MVP/Laser_Sequence/MVP_Laser_Full.py) and the [Laser - Reaper python file](.MVP/Laser_Sequence/Reaper.py).
+In the [Laser Sequence](./Laser_Sequence) folder, you can find the [Laser Rundown](./Laser_Sequence/Laser.md), the [Full Laser Sequence python file](./Laser_Sequence/MVP_Laser_Full.py) and the [Laser - Reaper python file](./Laser_Sequence/Reaper.py).
 
 </details>
 
 <details><summary><h2>Reaper DAW</h2></summary>
 
-In the [Reaper DAW](.MVP/Reaper_DAW) folder, you can find the [Reaper Rundown](.MVP/Reaper_DAW/Reaper.md), the [Audio FXs](.MVP/Reaper_DAW/Assets/FXs),  and the [Reaper DAW Master Show File](.MVP/Reaper_DAW/314MAINREAPER_POC_FINAL.rpp).
+In the [Reaper DAW](./Reaper_DAW) folder, you can find the [Reaper Rundown](./Reaper_DAW/Reaper.md), the [Audio FXs](./Reaper_DAW/FXs), and the [Reaper DAW Master Show File](./Reaper_DAW/314MAINREAPER_POC_FINAL.rpp).
 
 </details>
