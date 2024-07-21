@@ -89,6 +89,12 @@ In the [Launchpad (Ninja Pulse)](./Launchpad_(Ninja_Pulse)) folder, you can find
 
 </details>
 
+<details><summary><h2>OSC</h2></summary>
+
+In the [OSC](./OSC) folder, you can find the [OSC Rundown](./OSC/OSC.md), the [Memory Sequence Game GUI python file](./OSC/MVP_MainGUI.py), and the [Memory Sequence Game Functions Storage python file](./OSC/MVP_FunctionStorage.py).
+
+</details>
+
 <details><summary><h2>Reaper DAW</h2></summary>
 
 In the [Reaper DAW](./Reaper_DAW) folder, you can find the [Reaper Rundown](./Reaper_DAW/Reaper.md), the [Audio FXs](./Reaper_DAW/FXs), and the [Reaper DAW Master Show File](./Reaper_DAW/314MAINREAPER_POC_FINAL.rpp).
