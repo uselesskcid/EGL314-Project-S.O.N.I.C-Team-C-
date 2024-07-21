@@ -11,8 +11,11 @@ Python Open Sound Control
 
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
+- [Code Hierarchy](#hierarchy) 👑
 - [Function Storage](#function-storage) 🗄️
 - [Main GUI](#gui) 📟
+- [Reaper Storage for Lasers](#laser-reaper) 🔴
+- [Laser Sequence GUI](#laser-gui) 🔴📟
 
 ## <a id="overview"> Overview 📃</a>
 
@@ -47,6 +50,30 @@ The body of the project. Connects almost everything together.
 📄 - [Main GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/OSC/MVP_MainGUI.py)
 
 The main GUI of the project. Capable of controlling grandMA3 and Reaper.
+
+📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Laser%20Sequence/MVP_Laser_Reaper.py)
+
+A scaled down version of the Function Storage, only having Reaper functions for the laser sequence.
+
+📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Laser%20Sequence/MVP_Laser_Full.py)
+
+Contains everything related to the laser sequence, including starting it. Has a GUI that relies on the Laser Reaper file for functions.
+
+
+## <a id="hierarchy"> Code Hierarchy 👑</a>
+Illustrating how the codes function together under the OSC section.
+
+```mermaid
+graph
+
+FS[FunctionStorage.py] --> G[grandMA3]
+FS --> R[Reaper]
+MG[MainGUI.py] --> FS
+L[Laser_Full.py] --> LR[Laser_Reaper.py]
+L --> LM[Laser Modules]
+LR --> R
+```
+
 ## <a id="function-storage"> Function Storage 🗄️</a>
 
 The Function Storage stores all functions we need to control <b>grandMA3 sequences</b> and <b>controlling Reaper</b> via its playback and jumping of markers.
@@ -127,3 +154,23 @@ The GUI is only intended to be used by us operating the station, and not to be u
 ![](osc_assets/maingui.png)
 
 The `Blackout` button clears all grandMA3 sequences and pauses the Reaper playback.
+
+## <a id="laser-reaper"> Reaper Storage for Lasers 🔴</a>
+
+The function storage for the laser modules only has Reaper marker jumping and playback. Functionally, it operates exactly the same way as the main storage.
+
+It's kept separate from the main file as we intend to differ the laser sequence codes from our station codes.
+
+## <a id="laser-gui"> Laser Sequence GUI 🔴📟</a>
+
+<i>This section only focuses on the OSC part of the GUI. For more information regarding the laser sequence, click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Laser%20Sequence/Laser.md).</i>
+
+Similar to the Main GUI, the GUI in the file `Laser_Full.py` relies on a storage for functions.
+
+![](osc_assets/lasergui.png)
+
+It's seperated into two parts:
+1) Team Laser Control - for individual laser control of our laser modules
+2) Sequence Control - to play the entire sequence with audio, and to test music playback
+
+Just like the `Sequence` section in the main GUI, the playing of the entire sequence is comprised of many smaller functions.
