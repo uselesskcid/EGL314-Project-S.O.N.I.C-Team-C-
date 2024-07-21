@@ -79,7 +79,7 @@ In the [L-ISA Controller](./L-ISA_Controller) folder, you can find the [L-ISA Ru
 
 <details><summary><h2>Laser Sequence</h2></summary>
 
-In the [Laser Sequence](./Laser_Sequence) folder, you can find the [Laser Rundown](./Laser_Sequence/Laser.md), the [Full Laser Sequence python file](./Laser_Sequence/MVP_Laser_Full.py) and the [Laser - Reaper python file](./Laser_Sequence/Reaper.py).
+In the [Laser Sequence](./Laser_Sequence) folder, you can find the [Laser Rundown](./Laser_Sequence/Laser.md), the [Full Laser Sequence python file](./Laser_Sequence/MVP_Laser_Full.py) and the [Laser - Reaper python file](./Laser_Sequence/MVP_Laser_Reaper.py).
 
 </details>
 
