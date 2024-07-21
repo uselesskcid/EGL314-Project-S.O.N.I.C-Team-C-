@@ -26,7 +26,7 @@ Open Source Control (OSC) messages are sent from a Raspberry Pi to Reaper DAW th
 
 ## <a id="files-in-use"> Files In Use 📂</a>
 
-🔊 - [Audio FXs ](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Reaper_DAW/FXs.py)
+🔊 - [Audio FXs ](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Reaper_DAW/FXs)
 
 This folder contains every audio effect used in the creation of the audio tracks, mixing and soundscape.
 
