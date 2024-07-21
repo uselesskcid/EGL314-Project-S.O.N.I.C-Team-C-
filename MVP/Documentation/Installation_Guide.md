@@ -163,11 +163,41 @@ python3 play_stop.py
 
 ## <a id="launchpad">Launchpad Configuration 📱</a>
 
-WIP
-
 ### Raspberry Pi to Launchpad 🔗
 
-WIP
+The Launchpad is the only device not controlled via PythonOSC. Instead, it uses MIDI for control.
+
+For this, we need to import the mido library. It stores most of the functions that we will be coding for our game to function.
+```
+import mido
+```
+
+Then, you will need create two variables and each variable opens the input port and output port for recieving MIDI messages and sending MIDI commands respectively.
+
+```
+# Example:
+
+outport = mido.open_output('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
+inport = mido.open_input('Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0')
+```
+>  - "outport" and "inport" are variables.
+>  - "mido.open_output" and "mido.open_input" are both functions from the mido library.
+> - Both the mido functions state the names for the input port and output ports of the Launchpad (Both are named ***'Launchpad Pro MK3:Launchpad Pro MK3 LPProMK3 MIDI 28:0'***) in order to open these ports for Launchpad and Raspberry Pi MIDI communication.
+
+### Appearance Customisation
+To add colour to the LEDs, we would need to assign a colour code to the ID number of the LEDs. To find out the colour codes of the Launchpad, refer to the [Launchpad Pro Programmer's Manual.]((https://fael-downloads-prod.focusrite.com/customer/prod/s3fs-public/downloads/LPP3_prog_ref_guide_200415.pdf))
+
+We need to start off by sending this output message to the Launchpad in order to tell it to light up 1 LED with a desired colour.
+```
+# Example 
+def pixel(buttonid, colour):
+     outport.send(mido.Message('note_on', note=buttonid, velocity=colour))
+```
+![](installation_assets/buttonids.png)
+
+> - The output port sends a MIDI message to the Launchpad.  'note_on' tells the LED to light up.
+> - For the Launchpad, 'note' is referred to as the button ID of an LED, and 'velocity' is referred to the colour of the LED to light up.
+> - 'pixel(buttonid, colour)' is defined as a function to light up 1 LED with a specific colour.
 
 ## <a id="references">References 📋</a>
 Credits to [Huats Club](https://github.com/huats-club) for the references of installing Rasp Pi virtual environments and sample Python files. 

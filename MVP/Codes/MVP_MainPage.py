@@ -43,7 +43,7 @@ def start_easy_mode():
     if current_mode != 'easy':  # Only start if not already in easy mode
         terminate_current_process()
         print("Starting easy mode...")
-        current_process = subprocess.Popen(['python', 'reaper/Backlog3Sprint2/easy_mode.py']) #File directory
+        current_process = subprocess.Popen(['python', 'Codes/MVP_EasyLevelPage.py']) #File directory
         current_mode = 'easy'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
@@ -55,7 +55,7 @@ def start_hard_mode():
     if current_mode != 'hard':  # Only start if not already in hard mode
         terminate_current_process()
         print("Starting hard mode...")
-        current_process = subprocess.Popen(['python', 'reaper/Backlog3Sprint2/hard_mode.py'])
+        current_process = subprocess.Popen(['python', 'Codes/MVP_HardLevelPage.py'])
         current_mode = 'hard'
         clear_board()
         light_mode_buttons()  # Ensure mode buttons remain lit
@@ -83,12 +83,6 @@ def block_modebuttons():
     input_block = False
     if not input_block:  # Ensure input_block is still False before lighting buttons
         light_mode_buttons(True)
-
-"""def submit_button_easy():
-    gamelist.easy_level_submit()
-
-def submit_button_hard():
-    gamelist.hard_level_submit()"""
     
 def handle_midi_input():
     """Function to handle incoming MIDI messages."""
@@ -114,12 +108,6 @@ def handle_midi_input():
             elif msg.note == 12 and current_mode == 'hard' and not input_block:
                 fs.SEQ_Hard()
                 threading.Thread(target=block_modebuttons).start()
-
-            """elif msg.note == 38 and current_mode == 'easy' and not input_block:
-                submit_button_easy()
-            elif msg.note == 48 and current_mode == 'hard' and not input_block:
-                submit_button_hard()"""
-
 
 def start_midi_listener():
     """Function to run the MIDI input handler in a separate thread."""
