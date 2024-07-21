@@ -43,19 +43,19 @@ def send_message(receiver_ip, receiver_port, address, message):
 
 ## <a id="files-in-use"> Files In Use 📂</a>
 
-📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/OSC/MVP_FunctionStorage.py)
+📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/MVP_FunctionStorage.py)
 
 The body of the project. Connects almost everything together.
 
-📄 - [Main GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/OSC/MVP_MainGUI.py)
+📄 - [Main GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/MVP_MainGUI.py)
 
 The main GUI of the project. Capable of controlling grandMA3 and Reaper.
 
-📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Laser%20Sequence/MVP_Laser_Reaper.py)
+📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_Laser_Reaper.py)
 
 A scaled down version of the Function Storage, only having Reaper functions for the laser sequence.
 
-📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Laser%20Sequence/MVP_Laser_Full.py)
+📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_Laser_Full.py)
 
 Contains everything related to the laser sequence, including starting it. Has a GUI that relies on the Laser Reaper file for functions.
 
