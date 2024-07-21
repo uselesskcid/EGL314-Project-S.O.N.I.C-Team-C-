@@ -126,6 +126,13 @@ def REA_JumpX(): #Marker X
 	send_message(REA_IP, REA_PORT, "/marker/"+str(fm+y), REA_MSG)
 	send_message(REA_IP, REA_PORT, "/action/1007", REA_MSG)
 ```
+The `fm` stands for our <b>First Marker's</b> timeline ID. Every subsequent marker will follow their placement according to it.
+
+![](osc_assets/Reaper_Timeline.png)
+
+For Reaper marker assignment, we were assigned marker IDs above 50. Due to Reaper action limitations, jumping to markers with marker IDs above 30 isn't possible. To work around this, we decided to jump marker according to their timeline IDs instead.
+
+Additionally, due to constant changes, the first marker's timeline ID changes, which results in changing every timeline ID we use in our marker functions. Hence, the `fm` was created for every marker we use to refer to the first one on the timeline that belongs to us. This results in only one change.
 
 ### Sequence
 

@@ -200,10 +200,12 @@ def pixel(buttonid, colour):
 > - 'pixel(buttonid, colour)' is defined as a function to light up 1 LED with a specific colour.
 
 ## <a id="references">References 📋</a>
-Credits to [Huats Club](https://github.com/huats-club) for the references of installing Rasp Pi virtual environments and sample Python files. 
+Credits to [Huats Club](https://github.com/huats-club) for the references of the following:
 
 🔗 - [Virtual environment & PythonOSC installation](https://github.com/huats-club/mts_sensor_cookbook/blob/main/0.%20virtual_environment/venv.md)
 
 🔗 - [grandMA3 Configuration](https://github.com/huats-club/oscstarterkit/tree/main/tutorial5)
 
 🔗 - [Reaper Configuration](https://github.com/huats-club/oscstarterkit/tree/main/tutorial8)
+
+🔗 - [MIDI Configuration](https://github.com/huats-club/mts_sensor_cookbook/blob/main/4.%20midi/midi.md)
