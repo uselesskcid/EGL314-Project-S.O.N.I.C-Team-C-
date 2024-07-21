@@ -83,6 +83,12 @@ In the [Laser Sequence](./Laser_Sequence) folder, you can find the [Laser Rundow
 
 </details>
 
+<details><summary><h2>Launchpad (Ninja Pulse)</h2></summary>
+
+In the [Launchpad (Ninja Pulse)](./Launchpad_(Ninja_Pulse)) folder, you can find the [Launchpad (Ninja Pulse) Rundown](./Launchpad_(Ninja_Pulse)/Launchpad.md).
+
+</details>
+
 <details><summary><h2>Reaper DAW</h2></summary>
 
 In the [Reaper DAW](./Reaper_DAW) folder, you can find the [Reaper Rundown](./Reaper_DAW/Reaper.md), the [Audio FXs](./Reaper_DAW/FXs), and the [Reaper DAW Master Show File](./Reaper_DAW/314MAINREAPER_POC_FINAL.rpp).
