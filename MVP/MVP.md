@@ -36,9 +36,16 @@ G <--LAN Dante--> H[Mixer<br>Yamaha QL1]
 H <--LAN Dante--> I[Amplifier<br>Yamaha XMV8140D]
 I --Speaker Cable to Euroblock (4P)--> J[12 Speakers<br>Yamaha VXS5]
 
-R[Laptop GUI] <--LAN/WiFi + OSC + OSC--> S[Raspberry Pi - Laser Master]
-S --WiFi + OSC + OSC---> T[Raspberry Pi - Laser Slave 1]
+R[Laptop GUI] <--LAN/WiFi + OSC--> S[Raspberry Pi - Laser Master]
+S --WiFi + OSC---> T[Raspberry Pi - Laser Slave 1]
 S --WiFi + OSC--> U[Raspberry Pi - Laser Slave 2]
 S --WiFi + OSC--> V[Raspberry Pi - Laser Slave 3]
 S --WiFi + OSC--> W[Raspberry Pi - Laser Slave 4]
 S --WiFi + OSC--> X[Raspberry Pi - Neopixel]
+
+T --Relay Module--> Y[Laser Modules - 6 for each Raspberry Pi]
+U --Relay Module--> Y
+V --Relay Module--> Y
+W --Relay Module--> Y
+X --Dupont(F)<-> XLR(F) to XLR(M) to Dupont(M)(Soldered)--> Z[Neo Pixel LED Strip]
+
