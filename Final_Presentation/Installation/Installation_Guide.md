@@ -34,7 +34,9 @@ References can be found below.
 
 ## <a id="rasp-pi"> Raspberry Pi Configuration ⚙️</a>
 
-Unfortunately with default configurations, it isn't possible to install packages using pip, a package installer for Python. To bypass, it's necessary to download a virtual environment on your Raspberry Pi.
+Unfortunately with default configurations, it isn't possible to install packages using pip, a package installer for Python.
+
+To bypass, it's necessary to download a virtual environment on your Raspberry Pi. Then, installing and running PythonOSC on it will be authorised.
 
 1) Install Python virtual environment
 
@@ -122,7 +124,7 @@ python3 grandma.py
 ## <a id="reaper">Reaper Configuration 🎛️</a>
 
 1) Use the shortcut `Ctrl+P` to go to Reaper Preferences 
-2) Scroll all the way to the bottom to Control/OSC/Web
+2) Scroll all the way to the bottom to Control/OSC/web
 3) Click on `Add` to add a new OSC device 
 
 ![](installation_assets/Reaper_Step2to3.png)

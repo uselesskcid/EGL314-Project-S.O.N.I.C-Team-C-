@@ -4,7 +4,7 @@ grandMA3
 
 <p align="center">
   <i align="center">
-  Rundown of grandMA3
+  Rundown of lighting sequences in grandMA3.
   </i>
 </p>
 

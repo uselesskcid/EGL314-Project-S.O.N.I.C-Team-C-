@@ -16,7 +16,7 @@
 ## <a id="overview"> Overview 📃</a>
 This repository folder contains all the notable assets, codes and others used for our Final Production in Week 17 that covers our station - Memory Sequence.
 
-In the Minimum Viable Product, we will be using a Master Station shared with others. The Master Station hosts 3 different open-source softwares, which are Reaper, L-ISA Controller and GrandMA3. Besides software, there are 12 speakers in a 10 by 10 meters room shared as well.
+We will be using a Master Station shared with others. The Master Station hosts 3 different open-source softwares, which are Reaper, L-ISA Controller and GrandMA3. Besides software, there are 12 speakers in a 10 by 10 meters room shared as well.
 
 The final demonstration will feature a full run through of our station. This includes an introduction, 2 difficulty levels, followed by a win/lose sequence. Once the game ends, we are to segway into our laser show as a wrap up. 
 
@@ -24,7 +24,7 @@ The final demonstration will feature a full run through of our station. This inc
 ## <a id="getting-started"> Getting Started 🔛</a>
 ### Installation Guide
 
-1️⃣ Your first stop! [Take a gander](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Documentation/Installation_Guide.md) as to how we installed everything, as well as how you can do it too.
+1️⃣ Your first stop! [Take a gander](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Installation/Installation_Guide.md) as to how we installed everything, as well as how you can do it too.
 
 ### Software & Hardware Overview
 
@@ -32,7 +32,7 @@ The final demonstration will feature a full run through of our station. This inc
 
 🔳 <b>L-ISA's</b> spatial object mixing takes our gameplay one step higher. [Go in-depth](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/L-ISA_Controller/L-ISA.md) into the specifics of what goes on.
 
-🔳 <b>grandMA3</b> provides a lighting control platform for our station. [Watch]((https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/GrandMA3/grandma3.md)) as our work comes to light.
+🔳 <b>grandMA3</b> provides a lighting control platform for our station. [Watch](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/GrandMA3/grandma3.md) as our work comes to light.
 
 🔳 Our softwares used are operated by <b>PythonOSC.</b> [See how](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/OSC/OSC.md) a humble laptop can control our entire system.
 

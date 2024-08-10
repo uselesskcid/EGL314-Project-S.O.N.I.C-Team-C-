@@ -30,7 +30,7 @@ Open Source Control (OSC) messages are sent from a Raspberry Pi to Reaper DAW th
 
 This folder contains every audio effect used in the creation of the audio tracks, mixing and soundscape.
 
-📄 - [Master Reaper DAW file](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Reaper_DAW/314MAINREAPER_POC_FINAL.rpp)
+📄 - [Master Reaper DAW file](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/FP/Reaper_DAW/314MAINREAPER_POC_FINAL.rpp)
 
 This the the Reaper DAW file that runs on the Master Station Laptop. It contains not just the audio tracks and audio mixing for Station 5, but also the other 4 stations and 5 laser sequences.
 

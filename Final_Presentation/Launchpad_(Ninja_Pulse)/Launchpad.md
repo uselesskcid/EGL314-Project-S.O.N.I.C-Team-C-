@@ -39,23 +39,23 @@ During each game mode, Players have to look out for audio cues and memorize the 
 
 ## <a id="files-in-use"> Files In Use 📂</a>
 
-📄 - [Main Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_MainPage.py)
+📄 - [Main Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_MainPage.py)
 
 The main page of the game. Contains the suspense sequence to signify the 'activation' of the Ninja Pulse.
 
-📄 - [Easy Level Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_EasyLevelPage.py)
+📄 - [Easy Level Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_EasyLevelPage.py)
 
 The easy level page of the game.
 
-📄 - [Hard Level Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_HardLevelPage.py)
+📄 - [Hard Level Page](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_HardLevelPage.py)
 
 The hard level page of the game.
 
-📄 - [Launchpad Game Settings](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_LP_Game.py)
+📄 - [Launchpad Game Settings](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/FP/Codes/MVP_LP_Game.py)
 
 Used for keeping track of the player's inputs, as well as storing the answer keys. Also used for submit button functions and the triggering of win & lose sequences.
 
-📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/MVP_FunctionStorage.py)
+📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/FP_FunctionStorage.py)
 
 Used by the main page to trigger the suspense sequence at the start of the game. Also used by the launchpad game settings page to trigger the sequence in a win, and the lose sequence in a loss.
 
@@ -80,7 +80,7 @@ G --> S[Smoke Machine & DMX Fan]
 
 ### Main file
 
-The code file that we will only be running on our Raspberry Pi terminal is our **main file** which is the master file (`MVP_MainPage.py`) that sets up the whole game and  controls the running process of each individual game mode.
+The code file that we will only be running on our Raspberry Pi terminal is our **main file** which is the master file (`MainPage.py`) that sets up the whole game and  controls the running process of each individual game mode.
 
 - The orange start button is coded inside the main file to start and load the whole game on the Launchpad.
 
@@ -89,7 +89,7 @@ The code file that we will only be running on our Raspberry Pi terminal is our *
 - More modules are imported in this file such as ```time```, ```subprocess``` and ```threading``` in order to create functions to run one difficulty mode at a time.
 
 ### Easy mode file
-The layout for easy mode shows up when the file `MVP_EasyLevelPage` is loaded. 
+The layout for easy mode shows up when the file `EasyLevelPage` is loaded. 
 - Players can input the directions "Left" and "Right" with the input buttons.
 - The code contains the design layout for Easy mode on the Launchpad. 
 - The easy sequence play button on **Button ID 11** is coded with a function to play the easy mode audio sequence.

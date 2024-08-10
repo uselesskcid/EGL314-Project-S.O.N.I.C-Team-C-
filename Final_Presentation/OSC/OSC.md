@@ -13,8 +13,8 @@ Python Open Sound Control
 - [Code Hierarchy](#hierarchy) 👑
 - [Function Storage](#function-storage) 🗄️
 - [Main GUI](#gui) 📟
-- [Reaper Storage for Lasers](#laser-reaper) 🔴
 - [Laser Sequence GUI](#laser-gui) 🔴📟
+- [Reaper Storage for Lasers](#laser-reaper) 🔴
 
 ## <a id="overview"> Overview 📃</a>
 
@@ -42,19 +42,19 @@ def send_message(receiver_ip, receiver_port, address, message):
 
 ## <a id="files-in-use"> Files In Use 📂</a>
 
-📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/MVP_FunctionStorage.py)
+📄 - [Function Storage](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/FP_FunctionStorage.py)
 
 The body of the project. Connects almost everything together.
 
-📄 - [Main GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/MVP_MainGUI.py)
+📄 - [Main GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Codes/FP_MainGUI.py)
 
 The main GUI of the project. Capable of controlling grandMA3 and Reaper.
 
-📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_Laser_Reaper.py)
+📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_Laser_Reaper.py)
 
-A scaled down version of the Function Storage, only having Reaper functions for the laser sequence.
+A scaled down version of the Function Storage, having functions for the laser sequence.
 
-📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/MVP_Laser_Full.py)
+📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_Laser_Full.py)
 
 Contains everything related to the laser sequence, including starting it. Has a GUI that relies on the Laser Reaper file for functions.
 
@@ -131,7 +131,7 @@ The `fm` stands for our <b>First Marker's</b> timeline ID. Every subsequent mark
 
 For Reaper marker assignment, we were assigned marker IDs above 50. Due to Reaper action limitations, jumping to markers with marker IDs above 30 isn't possible. To work around this, we decided to jump marker according to their timeline IDs instead.
 
-Additionally, due to constant changes, the first marker's timeline ID changes, which results in changing every timeline ID we use in our marker functions. Hence, the `fm` was created for every marker we use to refer to the first one on the timeline that belongs to us. This results in only one change.
+Additionally, due to constant changes, our first marker's timeline ID changes, which results in changing every timeline ID we use in our marker functions. Hence, the variable `fm` was created for every marker we use to refer to the first one on the timeline that belongs to us. This results in only one change, our timeline ID for `fm`.
 
 ### Sequence
 
@@ -161,12 +161,6 @@ The GUI is only intended to be used by us operating the station, and not to be u
 
 The `Blackout` button clears all grandMA3 sequences and pauses the Reaper playback.
 
-## <a id="laser-reaper"> Reaper Storage for Lasers 🔴</a>
-
-The function storage for the laser modules only has Reaper marker jumping and playback. Functionally, it operates exactly the same way as the main storage.
-
-It's kept separate from the main file as we intend to differ the laser sequence codes from our station codes.
-
 ## <a id="laser-gui"> Laser Sequence GUI 🔴📟</a>
 
 <i>This section only focuses on the OSC part of the GUI. For more information regarding the laser sequence, click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Laser%20Sequence/Laser.md).</i>
@@ -176,7 +170,13 @@ Similar to the Main GUI, the GUI in the file `Laser_Full.py` relies on a storage
 ![](osc_assets/lasergui.png)
 
 It's seperated into two parts:
-1) Team Laser Control - for individual laser control of our laser modules
-2) Sequence Control - to play the entire sequence with audio, and to test music playback
+1) Laser Control - for control over our individual, team, or all lasers used in the laser sequence.
+2) Sequence Control - for music playback, lighting, raw laser sequence, and all of them combined into our final show.
 
 Just like the `Sequence` section in the main GUI, the playing of the entire sequence is comprised of many smaller functions.
+
+## <a id="laser-reaper"> Reaper Storage for Lasers 🔴</a>
+
+The function storage for the laser modules only has Reaper marker jumping and playback. Functionally, it operates exactly the same way as the main storage.
+
+It's kept separate from the main file as we intend to differ the laser sequence codes from our station codes.
