@@ -6,7 +6,9 @@ Python Open Sound Control
  <i align="center">A rundown of how Python Open Sound Control (PythonOSC) is used in our project. </i>
 </p>
 
-### Table Of Contents 📚
+## Table Of Contents 📚
+
+<b>
 
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
@@ -15,6 +17,8 @@ Python Open Sound Control
 - [Main GUI](#gui) 📟
 - [Laser Sequence GUI](#laser-gui) 🔴📟
 - [Reaper Storage for Lasers](#laser-reaper) 🔴
+
+</b>
 
 ## <a id="overview"> Overview 📃</a>
 

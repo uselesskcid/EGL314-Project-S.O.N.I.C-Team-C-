@@ -6,7 +6,9 @@
 <i align="center">Installation guide for our project. </i>
 </p>
 
-### Table Of Contents 📚
+## Table Of Contents 📚
+
+<b>
 
 - [Overview](#overview) 📃
 - [Raspberry Pi Configuration](#rasp-pi) ⚙️
@@ -15,6 +17,8 @@
 - [L-ISA Configuration](#lisa) 🔊
 - [Launchpad Configuration](#launchpad) 📱
 - [References](#references) 📋
+
+</b>
 
 ## <a id="overview"> Overview 📃</a>
 

@@ -43,7 +43,7 @@ The final demonstration will feature a full run through of our station. This inc
 ### Slides
 Many groups use a poster. We went for [a slightly different approach](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Slides).
 
-## <a id="setup"> Hardware & Software Setup ⚙️</a>
+## <a id="setup"> Software & Hardware Setup ⚙️</a>
 ```mermaid
 graph TD
 A <--MIDI<br>USB 3.0 to USB C--> K[Launchpad Pro MK3<br>Customized Touchpad] 

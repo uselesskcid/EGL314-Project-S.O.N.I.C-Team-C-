@@ -8,11 +8,15 @@ L-ISA Controller
   </i>
 </p>
 
-### Table Of Contents 📚
+## Table Of Contents 📚
+
+<b>
 
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
 - [Master L-ISA Controller file](#Master-Controller)
+
+</b>
 
 ## <a id="overview"> Overview 📃</a>
 

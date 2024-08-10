@@ -6,12 +6,16 @@ Launchpad Documentation
  <i align="center">A rundown of how the Launchpad Pro MK3 is used in our project. </i>
 </p>
 
-### Table Of Contents 📚
+## Table Of Contents 📚
+
+<b>
 
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
 - [Code Hierarchy](#hierarchy) 👑
 - [Level Overview](#level) 🎮
+
+</b>
 
 ## <a id="overview"> Overview 📃</a>
 
