@@ -15,6 +15,7 @@ Python Open Sound Control
 - [Code Hierarchy](#hierarchy) 👑
 - [Function Storage](#function-storage) 🗄️
 - [Main GUI](#gui) 📟
+- [Raspberry Pi Laser OSC](#laser-osc) ✅
 - [Laser Sequence GUI](#laser-gui) 🔴📟
 - [Reaper Storage for Lasers](#laser-reaper) 🔴
 
@@ -54,14 +55,17 @@ The body of the project. Connects almost everything together.
 
 The main GUI of the project. Capable of controlling grandMA3 and Reaper.
 
-📄 - [Laser Reaper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_Laser_Reaper.py)
+📄 - [Laser OSC Trigger](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Codes/FP_Laser_osclaser_trigger.py)
+
+Enables OSC connection for the Raspberry Pi running the file.
+
+📄 - [Laser Functions](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Codes/FP_Laser_Functions.py)
 
 A scaled down version of the Function Storage, having functions for the laser sequence.
 
-📄 - [Laser Full](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/Codes/FP_Laser_Full.py)
+📄 - [Laser GUI](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Codes/FP_Laser_GUI.py)
 
-Contains everything related to the laser sequence, including starting it. Has a GUI that relies on the Laser Reaper file for functions.
-
+Has a GUI that activates control of the Laser Functions file.
 
 ## <a id="hierarchy"> Code Hierarchy 👑</a>
 Illustrating how the codes function together under the OSC section.
@@ -72,9 +76,10 @@ graph
 FS[FunctionStorage.py] --> G[grandMA3]
 FS --> R[Reaper]
 MG[MainGUI.py] --> FS
-L[Laser_Full.py] --> LR[Laser_Reaper.py]
+L[Laser_GUI.py] --> LR[Laser_Functions.py]
 L --> LM[Laser Modules]
 LR --> R
+LO[osclaser_trigger.py] -- Enables OSC connection --> LM
 ```
 
 ## <a id="function-storage"> Function Storage 🗄️</a>
@@ -165,9 +170,19 @@ The GUI is only intended to be used by us operating the station, and not to be u
 
 The `Blackout` button clears all grandMA3 sequences and pauses the Reaper playback.
 
-## <a id="laser-gui"> Laser Sequence GUI 🔴📟</a>
+## <a id="laser-osc"> Raspberry Pi Laser OSC ✅</a>
 
-<i>This section only focuses on the OSC part of the GUI. For more information regarding the laser sequence, click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Laser%20Sequence/Laser.md).</i>
+<i>This section only focuses on the OSC part of the GUI. For more information regarding the laser sequence and its setup, click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Laser%20Sequence/Laser.md).</i>
+
+After the Raspberry Pi attached to the mount is turned on, the laser OSC trigger file is ran to "listen" for OSC commands.
+
+```
+python3 osclaser_trigger.py
+```
+
+After successfully "listening", laser control via OSC is possible.
+
+## <a id="laser-gui"> Laser Sequence GUI 🔴📟</a>
 
 Similar to the Main GUI, the GUI in the file `Laser_Full.py` relies on a storage for functions.
 

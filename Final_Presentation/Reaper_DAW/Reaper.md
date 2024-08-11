@@ -13,7 +13,7 @@ Reaper DAW
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
 - [Audio FXs](#audio-fxs) 🔊
-- [Master Reaper DAW file](#Master-Reaper) 📄
+- [Reaper DAW file](#reaper-file) 📄
 
 ## <a id="overview"> Overview 📃</a>
 
@@ -56,7 +56,7 @@ Audio FXs used for Laser/Light show soundscape creation:<br>
 [Laser/Light Show Song](./FXs/Laser&Light_Song.wav)<br>
 ~ Note: This song is a remix of different multitracks and FXs.
 
-## <a id="Master-Reaper"> Master Reaper DAW file </a> 📄
+## <a id="reaper-file">Reaper DAW file </a> 📄
 
 For reference, the picture below shows the section of time frame that our team has used.
 
