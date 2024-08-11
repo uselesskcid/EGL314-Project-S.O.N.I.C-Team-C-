@@ -120,8 +120,10 @@ Both the Raspberry Pi charger and the 5V power supply are connected to a power s
 The audio for our sequence is a trap beat mixed together with an ancient Japanese instrumental track. This gives a modern upbeat feeling, while simulatenously maintaining an ancient sound impression, which ties back to our objective.
 
 <audio controls src="laser_assets/Laser_Sequence_Song.wav" title="Song">
-Your browser does not support the audio element. Click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Laser_Sequence/laser_assets/Laser_Sequence_Song.wav) to navigate to the song.
+Your browser does not support the audio element.
 </audio>
+
+Song playback not showing up?  Click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Laser_Sequence/laser_assets/Laser_Sequence_Song.wav) to navigate to the song.
 
 ### <a id="software-np"> Neopixel Lighting </a>
 
