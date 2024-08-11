@@ -11,10 +11,15 @@
 <b>
 
 - [Overview](#overview) 📃
-- [Raspberry Pi Configuration](#rasp-pi) ⚙️
+- [PythonOSC Installation](#python-osc) ⚙️
 - [grandMA3 Configuration](#grandma3) 💡
 - [Reaper Configuration](#reaper) 🎛️
+  - [Raspberry Pi to Reaper](#rasp-pi-reaper) 🔗
 - [L-ISA Configuration](#lisa) 🔊
+  - [L-ISA Processor](#lisa-processor) ⬛
+  - [L-ISA Controller](#lisa-controller) 🟦
+  - [Raspberry Pi to L-ISA](#rasp-pi-lisa) 🔗
+  - [Reaper to L-ISA](#reaper-lisa) 🔗
 - [Launchpad Configuration](#launchpad) 📱
 - [References](#references) 📋
 
@@ -36,7 +41,7 @@ Additionally, a [Launchpad](https://novationmusic.com/search.php?search_query=la
 
 References can be found below.
 
-## <a id="rasp-pi"> Raspberry Pi Configuration ⚙️</a>
+## <a id="python-osc"> PythonOSC Installation ⚙️</a>
 
 Unfortunately with default configurations, it isn't possible to install packages using pip, a package installer for Python.
 
@@ -128,7 +133,7 @@ python3 grandma.py
 ## <a id="reaper">Reaper Configuration 🎛️</a>
 
 1) Use the shortcut `Ctrl+P` to go to Reaper Preferences 
-2) Scroll all the way to the bottom to Control/OSC/web
+2) Scroll all the way to the bottom to `Control/OSC/web`
 3) Click on `Add` to add a new OSC device 
 
 ![](installation_assets/Reaper_Step2to3.png)
@@ -144,7 +149,7 @@ python3 grandma.py
 
 ![](installation_assets/Reaper_Step4.png)
 
-### Raspberry Pi to Reaper 🔗
+### <a id="rasp-pi-reaper"> Raspberry Pi to Reaper 🔗</a>
 
 1) Create a file directory for Reaper. (Reusing the grandMA3 directory is also fine)
 ```
@@ -169,21 +174,52 @@ python3 play_stop.py
 
 ## <a id="lisa">L-ISA Configuration 🔊</a>
 
-1) Launch L-ISA Controller.
+### <a id="lisa-processor">L-ISA Processor ⬛</a>
+
+1) Launch L-ISA Processor.
+
+2) Under `Audio Device Type`, select `ASIO`.
+
+3) Under `Output`, select `Dante Virtual Soundcard`.
+
+![](installation_assets/LISA_Processor_Step2to3.png)
+
+4) On L-ISA Controller, go to `Processors`.
+
+5) Under `Main`, select `ASIO`.
+
+6) Click `Connect`.
+
+![](installation_assets/LISA_Processor_Step4to6.png)
+
+7) Under a successful connection, you should see the following in the red boxes change.
+
+![](installation_assets/LISA_Processor_Step7.png)
+
+### <a id="lisa-controller">L-ISA Controller 🟦</a>
+
+1) Launch L-ISA Controller (if not done so)
+
 2) Navigate to `Settings`.
+
 3) Navigate to `OSC`.
+
 4) Under the IP address column, change the IP address from 127.0.0.1 to the IP of your Raspberry Pi.
+
 5) Turn ON `Receive From` and `Levels Control`.
 
 ![](installation_assets/LISA_Step2to5.png)
 
 6) Once finished, navigate to `Sources`.
+
 7) Under the column `Ext OSC`, enable Pan (P), Width (W), Distance (D), Elevation (E), and Aux Send (S).
+
 8) Insert OSC ID for each source.
 
 ![](installation_assets/LISA_Step6to8.png)
 
-### Raspberry Pi to L-ISA 🔗
+
+### <a id="rasp-pi-lisa"> Raspberry Pi to L-ISA 🔗</a>
 
 1) Create a file directory for L-ISA.
 ```
@@ -224,6 +260,56 @@ The focus here will be on more OSC commands, so type `OSC API` into the search b
 In this page, there are many commands listed to give more precise control of L-ISA Controller. After finding an applicable function, copy the address (change source number if needed) and insert it in the sample files accordingly.
 
 ![](installation_assets/LISA_API_Step3.png)
+
+### <a id="reaper-lisa"> Reaper to L-ISA 🔗</a>
+
+#### loopMIDI
+
+1) Launch loopMIDI. Do not close it when Reaper & L-ISA are running.
+
+2) Name your new MIDI port and create it.
+
+![](installation_assets/ReaperLISA_Step2.png)
+
+#### Reaper
+
+3) Launch Reaper.
+
+4) Use the shortcut `Ctrl+P` to go to Reaper Preferences 
+
+5) Scroll to `Audio` > `MIDI Devices`. You should see your MIDI port created earlier on both MIDI inputs and outputs.
+
+6) Click to enable the port on the output (should be marked with a black dot)
+
+![](installation_assets/ReaperLISA_Step5to6.png)
+
+7) Exit Preferences and return to the main page.
+
+8) Go down to the Mixer section, and click the MIDI output button.
+
+9) Under `MIDI Hardware Output`, change the output to the loopMIDI port you created.
+
+10) Repeat steps 8 to 9 for every track used.
+
+11) At the top panel, click `Insert`.
+
+12) Click `SMPTE LTC/MTC Timecode Generator`. Drag it such that the start matches the start of the timeline, and extend longer if necessary.
+
+![](installation_assets/ReaperLISA_Step11to12.png)
+
+#### L-ISA
+
+13) Launch L-ISA Controller.
+
+14) Navigate to `Settings`.
+
+15) Navigate to `MIDI`.
+
+16) Under MIDI Interface, click MTC. The button should be fully white.
+
+17) Return to Reaper and test playback. If all's working well, the MIDI activity will turn green and the MTC timer will sync with Reaper.
+
+![](installation_assets/ReaperLISA_Step14to17.png)
 
 ## <a id="launchpad">Launchpad Configuration 📱</a>
 
@@ -266,12 +352,14 @@ For the Launchpad, `note` is referred to as the button ID of an LED, and `veloci
 `pixel(buttonid, colour)` is defined as a function to light up 1 LED with a specific colour.
 
 ## <a id="references">References 📋</a>
-Credits to [Huats Club](https://github.com/huats-club) for the references of the following:
+Credits to [Huats Club](https://github.com/huats-club) for the following references:
 
 🔗 - [Virtual environment & PythonOSC installation](https://github.com/huats-club/mts_sensor_cookbook/blob/main/0.%20virtual_environment/venv.md)
 
 🔗 - [grandMA3 Configuration](https://github.com/huats-club/oscstarterkit/tree/main/tutorial5)
 
 🔗 - [Reaper Configuration](https://github.com/huats-club/oscstarterkit/tree/main/tutorial8)
+
+🔗 - [L-ISA Configuration](https://github.com/huats-club/oscstarterkit/tree/main/tutorial7)
 
 🔗 - [MIDI Configuration](https://github.com/huats-club/mts_sensor_cookbook/blob/main/4.%20midi/midi.md)

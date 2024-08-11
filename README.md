@@ -62,11 +62,11 @@ Only one player interacting with MIDI Launchpad Pro MK3 (360° customized touchp
 
 ### 💯 ☑️ ▶️ [Full Documentation](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/FinalPresentation.md)  ◀️ ☑️ 💯
 
-For a proper and thorough walkthrough of our station, please click the link above. All codes, assets, pictures, guides, and in-depth explanations can be found there. This fully reflects our final piece of work in its concluded form.
+For a proper and thorough walkthrough of our station, please click the link above. All codes, assets, pictures, guides, and in-depth explanations can be found there. This fully reflects our final piece of work in Nanyang Polytechnic in its concluded form.
 
 
 ### Legacy
-Previous attempts at documentation can be found [here]() (Proof of Concept) and [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/MVP.md) (Minimum Viable Product). Both versions are deliberately left incomplete and visible to showcase our progress since.
+Previous attempts at documentation can be found [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/POC/README.md) (Proof of Concept) and [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/MVP/MVP.md) (Minimum Viable Product). Both versions are deliberately left incomplete and visible to showcase our progress since.
 <!-- Change this?? --->
 
 ## <a id="sys-diag"> System Diagram 📔</a>

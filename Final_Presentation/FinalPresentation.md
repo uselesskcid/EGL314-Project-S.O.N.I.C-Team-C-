@@ -11,12 +11,12 @@
 
 - [Overview](#overview) 📃
 - [Getting Started!](#getting-started) 🔛
-- [Hardware & Software Setup](#setup) ⚙️
+- [Software & Hardware Setup](#setup) ⚙️
 
 ## <a id="overview"> Overview 📃</a>
-This repository folder contains all the notable assets, codes and others used for our Final Production in Week 17 that covers our station - Memory Sequence.
+This repository folder contains all the notable assets, codes and others used for our Final Presentation that covers our station - Memory Sequence.
 
-We will be using a Master Station shared with others. The Master Station hosts 3 different open-source softwares, which are Reaper, L-ISA Controller and GrandMA3. Besides software, there are 12 speakers in a 10 by 10 meters room shared as well.
+We will be using a Master Station shared with others. The Master Station hosts 3 different open-source softwares; Reaper, L-ISA Controller and GrandMA3. Besides software, there are 12 speakers in a 10m by 10m room shared too.
 
 The final demonstration will feature a full run through of our station. This includes an introduction, 2 difficulty levels, followed by a win/lose sequence. Once the game ends, we are to segway into our laser show as a wrap up. 
 
@@ -30,15 +30,15 @@ The final demonstration will feature a full run through of our station. This inc
 
 🔳 Sound effects in our levels are ran through <b>Reaper.</b> [Dive deeper](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Reaper_DAW/Reaper.md) into the behind-the-scenes of our level creations.
 
-🔳 <b>L-ISA's</b> spatial object mixing takes our gameplay one step higher. [Go in-depth](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/L-ISA_Controller/L-ISA.md) into the specifics of what goes on.
+🔲 <b>L-ISA's</b> spatial object mixing takes our gameplay one step higher. [Go in-depth](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/L-ISA_Controller/L-ISA.md) into the specifics of what goes on.
 
 🔳 <b>grandMA3</b> provides a lighting control platform for our station. [Watch](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/GrandMA3/grandma3.md) as our work comes to light.
 
-🔳 Our softwares used are operated by <b>PythonOSC.</b> [See how](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/OSC/OSC.md) a humble laptop can control our entire system.
+🔲 Our softwares used are operated by <b>PythonOSC.</b> [See how](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/OSC/OSC.md) a humble laptop can control our entire system.
 
 🔳 We had the privilege of using a <b>Launchpad</b> for our gameplay. [Dig into](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Launchpad_(Ninja_Pulse)/Launchpad.md) how we utilised its power.
 
-🔳 Besides gameplay, we contributed to a remarkable <b>laser show</b>. [Take a look](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Laser_Sequence/Laser.md) at the flashy lights and their set-up.
+🔲 Besides gameplay, we contributed to a remarkable <b>laser show</b>. [Take a look](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Laser_Sequence/Laser.md) at the flashy lights and their set-up.
 
 ### Slides
 Many groups use a poster. We went for [a slightly different approach](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Slides).
