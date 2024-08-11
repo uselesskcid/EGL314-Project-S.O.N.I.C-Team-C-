@@ -10,6 +10,7 @@
 ### Table Of Contents 📚
 
 - [Overview](#overview) 📃
+- [Backstory](#backstory) 📖
 - [Getting Started!](#getting-started) 🔛
 - [Software & Hardware Setup](#setup) ⚙️
 
@@ -20,6 +21,16 @@ We will be using a Master Station shared with others. The Master Station hosts 3
 
 The final demonstration will feature a full run through of our station. This includes an introduction, 2 difficulty levels, followed by a win/lose sequence. Once the game ends, we are to segway into our laser show as a wrap up. 
 
+## <a id="backstory"> Backstory 📖</a>
+This is the lore of our station (and the previous one too!)
+
+For some background, the previous station have you as a ninja running away from some henchmen. Approaching our station, you have escaped them, but ventured out so far that you got lost into unknown territory. Fortunately, a fellow ninja has come to your help with the Ninja Pulse™.
+
+The Ninja Pulse™ is capable of translating sounds into directions, and you're supposed to listen out for a special type of shuriken that will be heard a certain amount of times from your left and right (and front and back on Hard Mode). Once the sound stops, you are to remember the order AND amount of shurikens played, and input them accordingly onto the Ninja Pulse™.
+
+If you win, then congratulations! You have made your way out! 😀
+
+If you lose, you'll be punished with smoke as the fog begins to settle in your area. 😥
 
 ## <a id="getting-started"> Getting Started 🔛</a>
 ### Installation Guide

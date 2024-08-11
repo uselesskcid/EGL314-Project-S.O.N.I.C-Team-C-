@@ -20,6 +20,7 @@ Laser Sequence
   - [Electrical Setup](#hardware-electrical) ⚡
 - [Software Overview](#software) 💻
   - [Song Choice](#software-song) 🎵
+  - [NeoPixel Lighting](#software-np) 💡
 
 </b>
 
@@ -125,7 +126,7 @@ Your browser does not support the audio element.
 
 Song playback not showing up?  Click [here](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/blob/main/Final_Presentation/Laser_Sequence/laser_assets/Laser_Sequence_Song.wav) to navigate to the song.
 
-### <a id="software-np"> Neopixel Lighting </a>
+### <a id="software-np"> Neopixel Lighting 💡</a>
 
 The NeoPixel lighting works by creating a client for both strips on the truss and balloon, followed by a function that triggers colours through RGB coding.
 ```
