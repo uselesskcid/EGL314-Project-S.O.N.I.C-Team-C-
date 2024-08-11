@@ -22,11 +22,11 @@ It is 1 out of the 3 Open Source software used in this entire S.O.N.I.C project.
 In our project, it is used for audio tracks mixing and editing, as well as being the timecode master.
 
 To begin with, a MTC timecode generator in Reaper DAW is used to sync the L-ISA Processor.
-Open Source Control (OSC) messages are sent from a Raspberry Pi to Reaper DAW through its [Control/OSC/Web Configuration](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Documentation/Installation_Guide.md/#reaper).
+Open Source Control (OSC) messages are sent from a Raspberry Pi to Reaper DAW through its [Control/OSC/Web Configuration](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/Final_Presentation/Installation/Installation_Guide.md/#reaper).
 
 ## <a id="files-in-use"> Files In Use 📂</a>
 
-🔊 - [Audio FXs ](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/MVP/Reaper_DAW/FXs)
+🔊 - [Audio FXs ](https://github.com/uselesskcid/EGL314-Project-S.O.N.I.C-Team-C-POC/tree/main/Final_Presentation/Reaper_DAW/FXs)
 
 This folder contains every audio effect used in the creation of the audio tracks, mixing and soundscape.
 
