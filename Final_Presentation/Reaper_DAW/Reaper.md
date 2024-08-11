@@ -52,9 +52,9 @@ Audio FXs used for Introduction soundscape creation:<br>
 [taiko drums bgm](./FXs/taiko%20drums%20bgm%20-%20for%20intro.wav)<br>
 [suspense drums](./FXs/suspense%20drums%20fx.wav)<br>
 
-Audio FXs used for Introduction soundscape creation:<br>
-[Laser Song Main](./FXs/high%20hopes%20(bass%20boosted)%20-%20laser%20song%201.mp3)<br>
-[Laser Song Alternative](./FXs/'i_want_to_be_ninja'%20-%20laser%20song%202.wav3)<br>
+Audio FXs used for Laser/Light show soundscape creation:<br>
+[Laser/Light Show Song](./FXs/Laser&Light_Song.wav)<br>
+~ Note: This song is a remix of different multitracks and FXs.
 
 ## <a id="Master-Reaper"> Master Reaper DAW file </a> 📄
 
@@ -63,4 +63,4 @@ For reference, the picture below shows the section of time frame that our team h
 ![](Assets/TeamC_Reaper.png)
 
 Memory Sequence Time Frame starts at 50:00:00 and ends at 59:00:00.<br>
-Team C Laser Sequence Time Frame starts at 1:01:00:00 and ends at 1:01:30:00.
+Team C Laser Sequence Time Frame starts at 1:01:00:00 and ends at 1:02:00:00.
