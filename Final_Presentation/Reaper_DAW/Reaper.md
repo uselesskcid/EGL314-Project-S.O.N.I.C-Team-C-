@@ -13,7 +13,7 @@ Reaper DAW
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
 - [Audio FXs](#audio-fxs) 🔊
-- [Master Reaper DAW file](#Master-Reaper) 📄
+- [Reaper DAW file](#reaper-file) 📄
 
 ## <a id="overview"> Overview 📃</a>
 
@@ -56,7 +56,7 @@ Audio FXs used for Introduction soundscape creation:<br>
 [Laser Song Main](./FXs/high%20hopes%20(bass%20boosted)%20-%20laser%20song%201.mp3)<br>
 [Laser Song Alternative](./FXs/'i_want_to_be_ninja'%20-%20laser%20song%202.wav3)<br>
 
-## <a id="Master-Reaper"> Master Reaper DAW file </a> 📄
+## <a id="reaper-file">Reaper DAW file </a> 📄
 
 For reference, the picture below shows the section of time frame that our team has used.
 

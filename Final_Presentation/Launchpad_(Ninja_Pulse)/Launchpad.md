@@ -6,16 +6,12 @@ Launchpad Documentation
  <i align="center">A rundown of how the Launchpad Pro MK3 is used in our project. </i>
 </p>
 
-## Table Of Contents 📚
-
-<b>
+### Table Of Contents 📚
 
 - [Overview](#overview) 📃
 - [Files In Use](#files-in-use) 📂
 - [Code Hierarchy](#hierarchy) 👑
 - [Level Overview](#level) 🎮
-
-</b>
 
 ## <a id="overview"> Overview 📃</a>
 
@@ -106,7 +102,7 @@ The easy mode consists of the most basic directions: Left and Right.
 ### Hard mode file
 The layout for hard mode shows up when this file is loaded. 
 - Players can input the directions "North", "South", "East" and "West" with the input buttons.
-- The code contains the design layout for Hard mode on the Launchpad. 
+- The code contains the design layout for Hard mode on the  Launchpad. 
 - The easy sequence play button on **Button ID 12** is coded with a function to play the Hard mode audio sequence.
 - Submit button on **Button ID 48** to submit the player's answers.
 
@@ -128,3 +124,33 @@ In addition, when players press the input buttons:
 
 Generally when a button is pressed, the colour of the button blinks.
 This is implemented to improve the user feedback.
+
+### Game Settings/Logic
+
+Inside the game settings file, it is coded so that it records the player's inputs on the Launchpad
+
+Both easy and hard mode have their own "correct sequences" coded inside the file.
+- The player will press the buttons(directions) on the Launchpad and submit their own sequence(answer) in each level(easy or hard).
+
+- Their answer will be recorded and will determine the outcome of the game.
+
+**Correct answer**
+>If the player inputs the sequence which is equal to the correct sequence, It determines that the player is correct and sends an OSC message to GrandMA3 and REAPER to play the win sequence with audio and lights.
+
+**Wrong answer**
+
+>If the sequence inputted is different to the one that is supposed to be correct sequence, It determines that the player has failed and the losing sequence will play.
+
+**Additional features**
+
+We have coded it so that when the player presses the submit button, The whole list of the inputted sequence from the player will be cleared. 
+
+Hence, the player would have to input the correct sequence again. 
+
+The player would be able to submit their answer if they have inputted a button a certain number of times.
+
+- eg. If the player has inputted a button less than 14 times, nothing will happen, unless the player has inputted a button more than 14 times. Then, it will determine if the player has inputted the correct sequence.
+
+
+
+> This is to prevent people from spamming the buttons, thus breaking the whole game.
