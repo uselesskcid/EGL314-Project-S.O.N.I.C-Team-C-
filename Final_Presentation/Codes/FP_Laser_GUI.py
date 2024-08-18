@@ -22,6 +22,7 @@ reaper_stop_btn = tk.Button(main, text="Stop Reaper", bg="RED",command=r.REA_Sto
 ma3_play_btn = tk.Button(main, text="Play MA3 Seq 104", bg="GREEN",command=r.MA3_Seq104,width=20,height=4)
 ma3_clear_btn = tk.Button(main, text="Clear MA3 Seq 104", bg="RED",command=r.MA3_Clear,width=20,height=4)
 laser_btn = tk.Button(main, text="Laser Sequence Only", bg="BLUE",command=r.LaserSeq,width=20,height=4)
+neopixel_btn = tk.Button(main, text="NeoPixel Sequence Only", bg="BLUE",command=r.NeoPixelSeq,width=20,height=4)
 full_btn = tk.Button(main, text="Full Sequence", bg="CYAN",command=r.FullSeq,width=20,height=4)
 
 
@@ -44,6 +45,7 @@ reaper_stop_btn.grid(row=6,column=1)
 ma3_play_btn.grid(row=7,column=0)
 ma3_clear_btn.grid(row=7,column=1)
 laser_btn.grid(row=8,column=0)
-full_btn.grid(row=8,column=1)
+neopixel_btn.grid(row=8,column=1)
+full_btn.grid(row=9,column=1)
 
 main.mainloop()

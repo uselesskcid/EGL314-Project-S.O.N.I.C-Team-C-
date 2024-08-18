@@ -4,6 +4,7 @@ from pythonosc import udp_client
 import time
 import FP_Laser_Neopixel as n
 import FP_Laser_Sequence as l
+from threading import Thread
 
 def send_message(receiver_ip, receiver_port, address, message):
   try:
@@ -52,8 +53,14 @@ def LaserSeq():
 def NeoPixelSeq():
     n.neopixelsequencestart()
 
+laserThread = Thread(target=LaserSeq)
+neopixelThread = Thread(target=NeoPixelSeq)
+
 def FullSeq():
     REA_JumpLaserMarker()
     MA3_Seq104()
-    l.LaserSequence()
+    neopixelThread.start()
+    time.sleep(28)
+    laserThread.start()
+    time.sleep(35)
     REA_Stop()

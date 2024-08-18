@@ -263,14 +263,11 @@ def LaserSequence():
     Counter = 0
     start_time = time.time()
     EveryLaserOff()
-    gradual_on(NUM_PIXELS_TRUSS, duration)
     while time.time() - start_time < 61 :
         time.sleep(BeatsPerMinute)
         EveryLaserOff()
         if (Counter == 1):
             EveryLaserOn()
-            red_blink_thread = Thread(target=red_blink_sequence, args=(NUM_PIXELS_TRUSS, meteor_duration))
-            red_blink_thread.start()
         if (Counter == 2):
             EveryLaserOff()
         if (Counter == 3):
@@ -283,8 +280,6 @@ def LaserSequence():
             EveryLaserOff()
         if (Counter == 7):
             SpeakerSide1()
-            green_blink_thread = Thread(target=green_blink_sequence, args=(NUM_PIXELS_TRUSS, meteor_duration))
-            green_blink_thread.start()
         if (Counter == 8):
             SpeakerSide2()
         if (Counter == 9):
@@ -297,8 +292,6 @@ def LaserSequence():
             SpeakerSide2()
         if (Counter == 13):
             SpeakerCorner1()
-            blue_blink_thread = Thread(target=blue_blink_sequence, args=(NUM_PIXELS_TRUSS, meteor_duration))
-            blue_blink_thread.start()
         if (Counter == 14):
             SpeakerCorner2()
         if (Counter == 15):
